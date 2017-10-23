@@ -1,10 +1,18 @@
-var express    = require('express');
-var app        = express();
-var morgan     = require('morgan');
-var mongoose   = require('mongoose');
-var bodyParser = require('body-parser');
-var server = require('http').createServer(app);
+var express = 		require('express');
+var app = 			express();
+var morgan = 		require('morgan');
+var mongoose = 		require('mongoose');
+var bodyParser = 	require('body-parser');
+var server = 		require('http').createServer(app);
 
+/** 
+ * =============================================================================
+ * Mongo Schemas
+ * =============================================================================
+ */
+ var Artist = 		require('./models/artist.js');
+ var Volunteer = 	require('./models/volunteer.js');
+ var Order = 		require('./models/order.js');
 
 /** 
  * =============================================================================
@@ -51,7 +59,6 @@ router.route('/')
 });
 
 app.use('/api', router);
-app.use('/api/make', require('./api/models/model.route'));
 
 /** 
  * =============================================================================
