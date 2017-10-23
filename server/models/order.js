@@ -1,8 +1,37 @@
 var mongoose = require('mongoose');
+var Artist = require('./artist.js');
 var Volunteer = require('./volunteer.js');
 var Schema = mongoose.Schema;
 
-var Order = new Schema({
+var volunteerSchema = new Schema({
+
+	firstName: {
+		type: String,
+		required: true
+	},
+
+	lastName: {
+		type: String,
+		required: true
+	}
+});
+var Volunteer = mongoose.model('Volunteer', volunteerSchema);
+
+var artistSchema = new Schema({
+
+	firstName: {
+		type: String,
+		required: true
+	},
+
+	lastName: {
+		type: String,
+		required: true
+	},
+});
+var Artist = mongoose.model('Artist', artistSchema);
+
+var orderSchema = new Schema({
 
 	id: {
 		type: Number,
@@ -10,15 +39,9 @@ var Order = new Schema({
 		default: 0
 	},
 
-	artist: {
-		type: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
-		required: true
-	},
+	artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
 
-	writer: {
-		type: { type: mongoose.Schema.Types.ObjectId, ref: 'Volunteer' },
-		required: true,
-	},
+	volunteer: { type: mongoose.Schema.Types.ObjectId, ref: 'Volunteer'},
 
 	date: {
 		type: Date,
@@ -39,5 +62,10 @@ var Order = new Schema({
 	},
 
 });
+var Order = mongoose.model('Order', orderSchema);
 
-module.exports = mongoose.model('Order', Order);
+module.exports = {
+	Order: Order,
+	Artist: Artist,
+	Volunteer: Volunteer
+}

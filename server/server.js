@@ -1,18 +1,20 @@
-var express = 		require('express');
-var app = 			express();
-var morgan = 		require('morgan');
-var mongoose = 		require('mongoose');
-var bodyParser = 	require('body-parser');
-var server = 		require('http').createServer(app);
+var express 	= require('express');
+var Q 			= require('q');
+var app 		= express();
+var morgan 		= require('morgan');
+var mongoose 	= require('mongoose');
+var bodyParser 	= require('body-parser');
+var server 		= require('http').createServer(app);
 
 /** 
  * =============================================================================
- * Mongo Schemas
+ * API
  * =============================================================================
  */
- var Artist = 		require('./models/artist.js');
- var Volunteer = 	require('./models/volunteer.js');
- var Order = 		require('./models/order.js');
+ // var Artist 	= require('./models/artist.js');
+ // var Volunteer 	= require('./models/volunteer.js');
+ // var Order 		= require('./models/order.js');
+ var seed 		= require('./seed.js');
 
 /** 
  * =============================================================================
@@ -22,13 +24,16 @@ var server = 		require('http').createServer(app);
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/artfair");
 // mongoose.connect("mongodb://localhost/rideswap")
 
-mongoose.Promise = global.Promise;
+mongoose.Promise = require('q').Promise;
 
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log("Connected to DB");
+
+    seed.populateDB();
+    
 });
 
 /** 
