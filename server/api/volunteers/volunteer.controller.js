@@ -4,19 +4,26 @@
  * Imports
  * =============================================================================
  */
-// var Volunteers = require('../../models/order.js');
+var Volunteers = require('../../models/volunteer.js');
+var Q = require('q');
 
 /** 
  * =============================================================================
  * Public Functions
  * =============================================================================
  */
-exports.getOrder = function(req, res) {
+exports.getVolunteer = function(id) {
 
-	Volunteers.find({'name': req.params.name})
-	.then(function(volunteer){
-		res.send(volunteer);
+	var p = Q.defer();
+
+	Volunteers.findOne({_id: id})
+	.then(function(response){
+		p.resolve(response);
+		console.log(response);
 	}, function(err){
-		res.send(err);
+		p.reject(err);
+		console.log(err);
 	});
+
+	return p.promise;
 }

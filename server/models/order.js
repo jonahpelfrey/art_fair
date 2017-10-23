@@ -3,34 +3,6 @@ var Artist = require('./artist.js');
 var Volunteer = require('./volunteer.js');
 var Schema = mongoose.Schema;
 
-var volunteerSchema = new Schema({
-
-	firstName: {
-		type: String,
-		required: true
-	},
-
-	lastName: {
-		type: String,
-		required: true
-	}
-});
-var Volunteer = mongoose.model('Volunteer', volunteerSchema);
-
-var artistSchema = new Schema({
-
-	firstName: {
-		type: String,
-		required: true
-	},
-
-	lastName: {
-		type: String,
-		required: true
-	},
-});
-var Artist = mongoose.model('Artist', artistSchema);
-
 var orderSchema = new Schema({
 
 	id: {
@@ -62,10 +34,5 @@ var orderSchema = new Schema({
 	},
 
 });
-var Order = mongoose.model('Order', orderSchema);
 
-module.exports = {
-	Order: Order,
-	Artist: Artist,
-	Volunteer: Volunteer
-}
+module.exports = mongoose.model('Order', orderSchema);

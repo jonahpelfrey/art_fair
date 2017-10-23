@@ -5,9 +5,10 @@
  * =============================================================================
  */
 var Q = require('q');
-var Order = require('./models/order.js').Order;
-var Volunteer = require('./models/order.js').Volunteer;
-var Artist = require('./models/order.js').Artist;
+var Volunteer = require('./models/volunteer.js');
+var Artist = require('./models/artist.js');
+var Order = require('./models/order.js');
+
 
 /** 
  * =============================================================================
@@ -15,7 +16,7 @@ var Artist = require('./models/order.js').Artist;
  * =============================================================================
  */
 
-function createArtist(){
+exports.createArtist = function(){
 
 	var p = Q.defer();
 
@@ -31,7 +32,7 @@ function createArtist(){
 	return p.promise;
 }
 
-function createVolunteer(){
+exports.createVolunteer = function(){
 
 	var p = Q.defer();
 
@@ -71,6 +72,7 @@ function createOrder(){
 
 exports.populateDB = function(){
 
+	var p = Q.defer();
 	var promises = [];
 
 	promises.push(createArtist());
@@ -79,18 +81,29 @@ exports.populateDB = function(){
 
 	Q.all(promises).then(function(data){
 		Order.findOne({price: 100}, function(err, order){
-			if(err) console.log(err);
+			if(err){
+				p.reject(err);
+				console.log(err);
+			}
 			else {
 				Artist.findOne({firstName: "John"}, function(err, artist){
-					if(err) console.log(err);
+					if(err){
+						p.reject(err);
+						console.log(err);
+					}
 					else {
 						order.artist = artist._id;
 						console.log("Artist ID: " + artist._id);
 
 						order.save(function(err, order){
-							if(err) console.log(err);
-
-							console.log(order);
+							if(err){
+								p.reject(err);
+								console.log(err);
+							}
+							else {
+								console.log(order);
+								p.resolve(order);
+							}
 						});
 					}
 				});
@@ -98,6 +111,8 @@ exports.populateDB = function(){
 
 		});
 	});
+
+	return p.promise;
 }
 
 

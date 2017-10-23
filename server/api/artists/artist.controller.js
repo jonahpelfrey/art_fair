@@ -4,19 +4,26 @@
  * Imports
  * =============================================================================
  */
-// var Artist = require('../../models/artist.js');
+var Artists = require('../../models/artist.js');
+var Q = require('q');
 
 /** 
  * =============================================================================
  * Public Functions
  * =============================================================================
  */
-exports.getArtist = function(req, res) {
+exports.getArtist = function(id) {
 
-	Artist.find({'name': req.params.name})
-	.then(function(artist){
-		res.send(artist);
+	var p = Q.defer();
+
+	Artists.findOne({_id: id})
+	.then(function(response){
+		p.resolve(response);
+		console.log(response);
 	}, function(err){
-		res.send(err);
+		p.reject(err);
+		console.log(err);
 	});
+
+	return p.promise;
 }
