@@ -1,4 +1,5 @@
 'use strict';
+
 /** 
  * =============================================================================
  * Imports
@@ -17,9 +18,9 @@ exports.getVolunteerForOrder = function(id) {
 	var p = Q.defer();
 
 	Volunteer.findOne({_id: id})
-	.then(function(response){
-		p.resolve(response);
-		console.log(response);
+	.then(function(volunteer){
+		p.resolve(volunteer);
+		console.log(volunteer);
 	}, function(err){
 		p.reject(err);
 		console.log(err);
@@ -29,11 +30,21 @@ exports.getVolunteerForOrder = function(id) {
 }
 
 exports.getVolunteer = function(req, res){
-
+	Volunteer.findOne({ _id: req.id })
+	.then(function(volunteer){
+		res.send(volunteer);
+	}, function(error){
+		res.send(error);
+	});
 }
 
 exports.getAllVolunteers = function(req, res){
-
+	Volunteer.find()
+	.then(function(volunteers){
+		res.send(volunteers);
+	}, function(error){
+		res.send(error);
+	});
 }
 
 exports.createVolunteer = function(req, res) {

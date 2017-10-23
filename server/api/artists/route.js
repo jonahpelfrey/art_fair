@@ -15,6 +15,8 @@ var router = express.Router();
  * Routes
  * =============================================================================
  */
-router.get('/artist/name', controller.getArtist);
+router.get('/artists/:id', controller.getArtist);
+router.get('/artists/all', controller.getAllArtists);
+router.post('/artists/create', controller.createArtist);
 
 module.exports = router;

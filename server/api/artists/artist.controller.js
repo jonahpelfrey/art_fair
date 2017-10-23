@@ -29,11 +29,21 @@ exports.getArtistForOrder = function(id){
 }
 
 exports.getArtist = function(req, res){
-
+	Artist.findOne({ _id: req.id})
+	.then(function(artist){
+		res.send(artist)
+	}, function(error){
+		res.send(err);
+	});
 }
 
 exports.getAllArtists = function(req, res){
-	
+	Artist.find()
+	.then(function(artists){
+		res.send(artists);
+	}, function(error){
+		res.send(error);
+	});
 }
 
 exports.createArtist = function(req, res){

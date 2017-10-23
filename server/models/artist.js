@@ -14,4 +14,9 @@ var artistSchema = new Schema({
 	},
 });
 
+artistSchema.methods.fullName = function(){
+	var fullName = this.firstName + " " + this.lastName;
+	return fullName;
+};
+
 module.exports = mongoose.model('Artist', artistSchema);

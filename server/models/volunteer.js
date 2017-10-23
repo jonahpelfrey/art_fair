@@ -14,4 +14,9 @@ var volunteerSchema = new Schema({
 	}
 });
 
+volunteerSchema.methods.fullName = function(){
+	var fullName = this.firstName + " " + this.lastName;
+	return fullName;
+};
+
 module.exports = mongoose.model('Volunteer', volunteerSchema);

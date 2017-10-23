@@ -15,6 +15,8 @@ var router = express.Router();
  * Routes
  * =============================================================================
  */
-router.get('/volunteer/name', controller.getVolunteer);
+router.get('/volunteers/:id', controller.getVolunteer);
+router.get('/volunteers/all', controller.getAllVolunteers);
+router.post('/volunteers/create', controller.createVolunteer);
 
 module.exports = router;

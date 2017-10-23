@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Artist = require('./artist.js');
 var Volunteer = require('./volunteer.js');
+var Buyer = require('./buyer.js');
 var Schema = mongoose.Schema;
 
 var orderSchema = new Schema({
@@ -14,6 +15,8 @@ var orderSchema = new Schema({
 	artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
 
 	volunteer: { type: mongoose.Schema.Types.ObjectId, ref: 'Volunteer'},
+
+	buyer: { type: mongoose.Schema.Types.ObjectId, ref: 'Buyer'},
 
 	date: {
 		type: Date,

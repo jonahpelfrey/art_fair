@@ -5,18 +5,12 @@
  * =============================================================================
  */
 var Q = require('q');
+var Buyer = require('./models/buyer.js');
 var Volunteer = require('./models/volunteer.js');
 var Artist = require('./models/artist.js');
 var Order = require('./models/order.js');
 
-
-/** 
- * =============================================================================
- * Public Functions
- * =============================================================================
- */
-
-exports.createArtist = function(){
+function createArtist(){
 
 	var p = Q.defer();
 
@@ -32,7 +26,7 @@ exports.createArtist = function(){
 	return p.promise;
 }
 
-exports.createVolunteer = function(){
+function createVolunteer(){
 
 	var p = Q.defer();
 
@@ -46,6 +40,29 @@ exports.createVolunteer = function(){
 	});
 
 	return p.promise;
+}
+
+function createBuyer(){
+
+	var p = Q.defer();
+
+	var b = new Buyer();
+	b.firstName = "David";
+	b.lastName = "Anderson";
+	b.address.street = "1500 W. Gorham St";
+	b.address.city = "Madison";
+	b.address.state = "WI";
+	b.address.zip = "53703";
+	b.phoneNumber = "800-212-2320";
+	b.email = "danderson@gmail.com";
+
+	b.save(function(err, buyer){
+		if(err) p.reject(err);
+		else { p.resolve(buyer); }
+	});
+
+	return p.promise;
+
 }
 
 
@@ -70,50 +87,44 @@ function createOrder(){
 	return p.promise;
 }
 
-exports.populateDB = function(){
-
-	var p = Q.defer();
+/** 
+ * =============================================================================
+ * Public Functions
+ * =============================================================================
+ */
+exports.generateModels = function(){
 	var promises = [];
 
+	promises.push(createBuyer());
 	promises.push(createArtist());
 	promises.push(createVolunteer());
 	promises.push(createOrder());
 
-	Q.all(promises).then(function(data){
-		Order.findOne({price: 100}, function(err, order){
-			if(err){
-				p.reject(err);
-				console.log(err);
-			}
-			else {
-				Artist.findOne({firstName: "John"}, function(err, artist){
-					if(err){
-						p.reject(err);
-						console.log(err);
-					}
-					else {
-						order.artist = artist._id;
-						console.log("Artist ID: " + artist._id);
+	Q.all(promises).then(function(results){
 
-						order.save(function(err, order){
-							if(err){
-								p.reject(err);
-								console.log(err);
-							}
-							else {
-								console.log(order);
-								p.resolve(order);
-							}
-						});
-					}
-				});
-			}
+		console.log("Buyer: " + results[0]._id);
+		console.log("Artist: " + results[1]._id);
+		console.log("Volunteer: " + results[2]._id);
 
+		var id = results[3]._id;
+		Order.findOne({ _id: id })
+		.then(function(order){
+
+			order.buyer = results[0]._id;
+			order.artist = results[1]._id;
+			order.volunteer = results[2]._id;
+
+			order.save(function(error, order){
+				if(error) console.log(error);
+				else { console.log(order); }
+			});
+
+		}, function(error){
+			console.log(error);
 		});
 	});
-
-	return p.promise;
 }
+
 
 
 
