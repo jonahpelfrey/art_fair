@@ -5,10 +5,26 @@
  * =============================================================================
  */
 var Q = require('q');
+var bcrypt = require('bcryptjs');
 var Buyer = require('./models/buyer.js');
 var Volunteer = require('./models/volunteer.js');
 var Artist = require('./models/artist.js');
 var Order = require('./models/order.js');
+
+exports.testHash = function(){
+
+	let hash = bcrypt.hashSync('password', 10);
+	console.log(hash);
+
+	if(bcrypt.compareSync('password', hash)) {
+ 		
+ 		console.log('Passwords Match');
+	} 
+	else {
+ 		
+ 		console.log('Passwords do not match');
+	}
+}
 
 function createArtist(){
 

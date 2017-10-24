@@ -14,8 +14,6 @@ var router = express.Router();
 * Routes
 * =============================================================================
 */
-router.get('/buyers/:id', controller.getBuyer);
-router.get('/buyers/all', controller.getAllBuyers);
-router.post('/buyers/create', controller.createBuyer);
+router.get('/test', controller.getTest);
 
 module.exports = router;

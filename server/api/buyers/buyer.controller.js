@@ -13,6 +13,11 @@ var Q = require('q');
 * Public Functions
 * =============================================================================
 */
+exports.getTest = function(req, res){
+	console.log("TRIGGERED");
+	res.send("Buyer Test Worked!");
+}
+
 exports.getBuyerForOrder = function(id){
 
 	var p = Q.defer();
