@@ -30,7 +30,7 @@ exports.getBuyerForOrder = function(id){
 }
 
 exports.getBuyer = function(req, res){
-	Buyer.findOne({ _id. req.id })
+	Buyer.findOne({ _id: req.id })
 	.then(function(buyer){
 		res.send(buyer);
 	}, function(error){
