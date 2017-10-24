@@ -14,8 +14,16 @@ var Q = require('q');
 * =============================================================================
 */
 exports.getTest = function(req, res){
-	console.log("TRIGGERED");
-	res.send("Buyer Test Worked!");
+
+	if(req.session.views){
+		req.session.views++;
+		res.send("Buyer Test Worked! Views: " + req.session.views);
+	}
+	else {
+		req.session.views = 1;
+		res.send("Buyer Test Worked!");
+	}
+	
 }
 
 exports.getBuyerForOrder = function(id){

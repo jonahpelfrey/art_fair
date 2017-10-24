@@ -3,6 +3,10 @@ var bcrypt = require('bcryptjs');
 var config = require('./config.js');
 var Admin = require('../../models/admin.js');
 
+exports.home = function(req, res){
+	res.send("Welcome to the home page");
+}
+
 exports.register = function(){
 
 	var hashedPassword = bcrypt.hashSync(config.password, 8);
