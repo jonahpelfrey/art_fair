@@ -44,7 +44,7 @@ exports.getBuyerForOrder = function(id){
 	return p.promise;
 }
 
-exports.getBuyer = function(req, res){
+exports.getBuyerById = function(req, res){
 	Buyer.findOne({ _id: req.id })
 	.then(function(buyer){
 		res.send(buyer);
@@ -81,4 +81,8 @@ exports.createBuyer = function(req, res){
 		}
 	});
 
+}
+
+exports.removeBuyer = function(req, res){
+	
 }
