@@ -1,0 +1,8 @@
+#ENV
+.env
+
+#CONFIG
+.DS_STORE
+
+#NPM
+server/node_modules
