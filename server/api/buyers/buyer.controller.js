@@ -17,11 +17,13 @@ exports.getTest = function(req, res){
 
 	if(req.session.views){
 		req.session.views++;
-		res.send("Buyer Test Worked! Views: " + req.session.views);
+		req.session.save();
+		res.end("Buyer Test Worked! Views: " + req.session.views);
 	}
 	else {
 		req.session.views = 1;
-		res.send("Buyer Test Worked!");
+		req.session.save();
+		res.end("Buyer Test Worked!");
 	}
 	
 }

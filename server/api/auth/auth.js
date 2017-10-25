@@ -4,7 +4,24 @@ var config = require('./config.js');
 var Admin = require('../../models/admin.js');
 
 exports.home = function(req, res){
-	res.send("Welcome to the home page");
+
+	if(req.session){
+		
+		if(req.session.views){
+
+			req.session.views++;
+			res.send("Home Page | Views: " + req.session.views)
+		}
+		else {
+			req.session.views++;
+			res.send("Welcome to the home page | session but no views");
+		}
+
+	}
+	else {
+		res.send("Welcome to the home page");
+	}
+	
 }
 
 exports.register = function(){

@@ -54,22 +54,22 @@ db.once('open', function() {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
+
 /** 
 * =============================================================================
 * Middleware
 * =============================================================================
 */
+var MemoryStore = session.MemoryStore;
+
 var sessionOpts = {
 	name: 'id',
 	saveUninitialized: true, 						
 	resave: false, 									
-	store: new MongoStore({
-      url: process.env.DB_HOST,
-      ttl: 3600000,
-    }),
+	store: new MemoryStore(),
 	secret: process.env.SECRET,
 	cookie : { 
-		httpOnly: true,
+		httpOnly: false,
 		path: process.env.COOKIE_PATH,
 		maxAge: 3600000,
 	} 
@@ -108,10 +108,12 @@ app.use(function printSession(req, res, next) {
 * Routes
 * =============================================================================
 */
+
 app.use('/api/buyers', require('./api/buyers/route'));
 app.use('/api/artists', require('./api/artists/route'));
 app.use('/api/orders', require('./api/orders/route'));
 app.use('/api/volunteers', require('./api/volunteers/route'));
+app.use('/api/dashboard', require('./api/general/route'));
 app.use('/', require('./api/auth/route'));
 
 /** 
