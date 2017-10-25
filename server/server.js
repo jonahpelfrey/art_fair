@@ -42,7 +42,7 @@ db.once('open', function() {
     console.log("Connected to DB");
 
     // seed.generateModels();
-    // seed.createGroup();
+    seed.createGroup();
 });
 
 

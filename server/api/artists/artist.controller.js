@@ -12,6 +12,14 @@ var Q = require('q');
  * Public Functions
  * =============================================================================
  */
+
+exports.updateArtist = function(req, res){
+	Artist.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, artist){
+		if(err) res.send(err);
+		res.json({message: "Artist updated!", artist});;
+	});
+}
+
 exports.getArtistForOrder = function(id){
 
 	var p = Q.defer();
@@ -44,23 +52,6 @@ exports.getAllArtists = function(req, res){
 	    }, function(error){
 	    	res.send(error);
 	    });
-}
-
-exports.updateArtist = function(req, res){
-	Artist.findOne({ _id: req.params.id})
-		.then(function(artist){
-
-			artist.firstName = req.body.firstName;
-			artist.save(function(err, artist){
-				if(err) res.send(err);
-				else {
-					res.json({message: "Artist updated!", artist });
-				}
-			});
-			
-		}, function(error){
-			res.send(error);
-		});
 }
 
 exports.createArtist = function(req, res){
