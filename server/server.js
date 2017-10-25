@@ -13,14 +13,6 @@ var mongoose 	= require('mongoose');
 var bodyParser 	= require('body-parser');
 var server 		= require('http').createServer(app);
 var io 			= require('socket.io')(server);
-io.on('connection', function(socket) {  
-	console.log('Client connected | ID: ' + socket.id);
-
-	socket.on('disconnect', function(){
-		console.log('User has disconnected');
-	});
-
-});
 var seed 		= require('./seed.js');
 
 var SessionManager 	= require('./session/session')(app);
@@ -78,7 +70,7 @@ SessionManager.initialize();
 * Sockets
 * =============================================================================
 */
-// SocketManager.initialize();
+SocketManager.initialize();
 
 
 /** 
