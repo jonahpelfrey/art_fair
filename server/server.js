@@ -14,7 +14,7 @@ var bodyParser 	= require('body-parser');
 var server 		= require('http').createServer(app);
 var seed 		= require('./seed.js');
 
-var SessionManager = require('./session/session');
+var SessionManager = require('./session/session')(app);
 
 /** 
 * =============================================================================
@@ -42,7 +42,7 @@ db.once('open', function() {
     console.log("Connected to DB");
 
     // seed.generateModels();
-    seed.createGroup();
+    // seed.createGroup();
 });
 
 
@@ -61,7 +61,7 @@ module.exports = app;
 * Middleware
 * =============================================================================
 */
-SessionManager.initialize(app);
+SessionManager.initialize();
 
 
 /** 

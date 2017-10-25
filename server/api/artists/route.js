@@ -17,7 +17,7 @@ var router = express.Router();
  */
 router.get('/', controller.getAllArtists);
 router.post('/', controller.createArtist);
-router.put('/:id', controller.updateTest);
+router.put('/:id', controller.updateArtist);
 router.get('/:id', controller.getArtistById);
 
 module.exports = router;
