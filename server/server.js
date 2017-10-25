@@ -12,9 +12,19 @@ var morgan 		= require('morgan');
 var mongoose 	= require('mongoose');
 var bodyParser 	= require('body-parser');
 var server 		= require('http').createServer(app);
+var io 			= require('socket.io')(server);
+io.on('connection', function(socket) {  
+	console.log('Client connected | ID: ' + socket.id);
+
+	socket.on('disconnect', function(){
+		console.log('User has disconnected');
+	});
+
+});
 var seed 		= require('./seed.js');
 
-var SessionManager = require('./session/session')(app);
+var SessionManager 	= require('./session/session')(app);
+var SocketManager	= require('./socket/socket')(io);
 
 /** 
 * =============================================================================
@@ -42,7 +52,7 @@ db.once('open', function() {
     console.log("Connected to DB");
 
     // seed.generateModels();
-    // seed.createGroup();
+    seed.createGroup();
 });
 
 
@@ -62,6 +72,13 @@ module.exports = app;
 * =============================================================================
 */
 SessionManager.initialize();
+
+/** 
+* =============================================================================
+* Sockets
+* =============================================================================
+*/
+// SocketManager.initialize();
 
 
 /** 

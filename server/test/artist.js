@@ -60,8 +60,8 @@ describe('Artists', () => {
 					res.should.have.status(200);
 					res.body.should.be.an('object');
 					res.body.should.have.property('message').eql('Artist successfully added!');
-					res.body.artist.should.have.property('firstName');
-					res.body.artist.should.have.property('lastName');
+					res.body.result.should.have.property('firstName');
+					res.body.result.should.have.property('lastName');
 					done();
 				});
 		});
@@ -99,7 +99,24 @@ describe('Artists', () => {
 					res.should.have.status(200);
 					res.body.should.be.an('object');
 					res.body.should.have.property('message').eql('Artist updated!');
-					res.body.artist.should.have.property('firstName').eql('David');
+					res.body.result.should.have.property('firstName').eql('David');
+					done();
+				});
+			});
+		});
+	});
+
+
+	describe('/DELETE:id artist', () => {
+		it('should DELETE an artist given the id', (done) => {
+			let artist = new Artist({firstName: "John", lastName: "Smith"});
+			artist.save( (err, artist) => {
+				chai.request(app)
+				.delete('/api/artists/' + artist.id)
+				.end( (err, res) => {
+					res.should.have.status(200);
+					res.body.should.be.an('object');
+					res.body.should.have.property('message').eql('Artist successfully deleted!');
 					done();
 				});
 			});

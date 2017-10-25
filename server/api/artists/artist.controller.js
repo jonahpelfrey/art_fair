@@ -12,14 +12,6 @@ var Q = require('q');
  * Public Functions
  * =============================================================================
  */
-
-exports.updateArtist = function(req, res){
-	Artist.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, artist){
-		if(err) res.send(err);
-		res.json({message: "Artist updated!", artist});;
-	});
-}
-
 exports.getArtistForOrder = function(id){
 
 	var p = Q.defer();
@@ -54,18 +46,35 @@ exports.getAllArtists = function(req, res){
 	    });
 }
 
+exports.updateArtist = function(req, res){
+	Artist.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, result){
+		if(err) res.send(err);
+		res.json({message: "Artist updated!", result});;
+	});
+}
+
 exports.createArtist = function(req, res){
 
 	var a = new Artist();
 	a.firstName = req.body.firstName;
 	a.lastName = req.body.lastName;
 
-	a.save(function(err, artist){
+	a.save(function(err, result){
 		if(err){
 			res.send(err);
 		}
 		else {
-			res.json({message: "Artist successfully added!", artist });
+			res.json({message: "Artist successfully added!", result });
 		}
 	});
 }
+
+exports.removeArtistById = function(req, res){
+	Artist.findOneAndRemove({ _id: req.params.id}, function(err, result){
+		if(err) res.send(err);
+		res.json({message: "Artist successfully deleted!", result});
+	});
+}
+
+
+

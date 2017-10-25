@@ -6,7 +6,7 @@
 var session	= require('express-session');
 var bcrypt = require('bcryptjs');
 
-
+ 
 /** 
 * =============================================================================
 * Public Functions
