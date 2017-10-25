@@ -45,16 +45,16 @@ exports.getBuyerForOrder = function(id){
 }
 
 exports.getBuyerById = function(req, res){
-	Buyer.findOne({ _id: req.id })
-	.then(function(buyer){
-		res.send(buyer);
-	}, function(error){
-		res.send(error);
-	});
+	Buyer.findOne({ _id: req.params.id })
+		.then(function(buyer){
+			res.json(buyer);
+		}, function(error){
+			res.send(error);
+		});
 }
 
 exports.getAllBuyers = function(req, res){
-	Buyer.find()
+	Buyer.find({})
 	.then(function(buyers){
 		res.send(buyers);
 	}, function(error){
@@ -62,27 +62,36 @@ exports.getAllBuyers = function(req, res){
 	});
 }
 
+exports.updateBuyer = function(req, res){
+	Buyer.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, result){
+		if(err) res.send(err);
+		res.json({message: "Buyer updated!", result});;
+	});
+}
+
 exports.createBuyer = function(req, res){
 
 	var b = new Buyer();
-	b.firstName = req.firstName;
-	b.lastName = req.lastName;
-	b.address = req.address;
-	b.email = req.email;
+	b.firstName = req.body.firstName;
+	b.lastName = req.body.lastName;
+	b.address = req.body.address;
+	b.phoneNumber = req.body.phoneNumber;
+	b.email = req.body.email;
 
-	b.save(function(err, buyer){
+	b.save(function(err, result){
 		if(err){
 			res.send(err);
-			console.log(err);
 		}
 		else {
-			res.send("Successfully Created Buyer");
-			console.log(buyer);
+			res.json({message: "Buyer successfully added!", result});
 		}
 	});
 
 }
 
-exports.removeBuyer = function(req, res){
-	
+exports.removeBuyerById = function(req, res){
+	Buyer.findOneAndRemove({ _id: req.params.id}, function(err, result){
+		if(err) res.send(err);
+		res.json({message: "Buyer successfully deleted!", result});
+	});
 }
