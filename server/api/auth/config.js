@@ -15,3 +15,11 @@ module.exports = {
 //         }
 //     });
 // });
+
+// BookSchema.pre('save', next => {
+//   now = new Date();
+//   if(!this.createdAt) {
+//     this.createdAt = now;
+//   }
+//   next();
+// });

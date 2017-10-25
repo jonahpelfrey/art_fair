@@ -52,12 +52,6 @@ exports.initialize = function(app){
 	//Add session to app
 	app.use(session(sessionOpts));
 
-	//Print Session Information For Debugging
-	app.use(function printSession(req, res, next){
-	  console.log('req.session', req.session);
-	  return next();
-	});
-
 	//Add middleware to validate cookie token
 	app.use(function validateToken(req, res, next){
 		return next();
@@ -75,6 +69,15 @@ exports.initialize = function(app){
 		req.session.userInfo = user;
 		cb();
 	};
+}
+
+exports.enableLogging = function(app){
+
+	//Print Session Information For Debugging
+	app.use(function printSession(req, res, next){
+		console.log('req.session', req.session);
+	  	return next();
+	});
 }
 
 

@@ -81,7 +81,6 @@ function createBuyer(){
 
 }
 
-
 function createOrder(){
 
 	var p = Q.defer();
@@ -141,7 +140,26 @@ exports.generateModels = function(){
 	});
 }
 
+exports.createGroup = function(){
 
+	var a = new Artist();
+	a.firstName = 'John';
+	a.lastName = 'Smith';
+
+	var b = new Artist();
+	b.firstName = "Tom";
+	b.lastName = "Johnson";
+
+	a.save(function(err, artist){
+		if(err) console.log(err);
+		else { console.log(artist) }
+	});
+
+	b.save(function(err, artist){
+		if(err) console.log(err);
+		else { console.log(artist) }
+	});
+}
 
 
 
