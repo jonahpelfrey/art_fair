@@ -16,7 +16,6 @@ module.exports = function(app){
 
 	function enableLogging(){
 
-		//Print Session Information For Debugging
 		app.use(function printSession(req, res, next){
 			console.log('req.session', req.session);
 		  	return next();

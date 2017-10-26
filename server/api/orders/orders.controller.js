@@ -5,61 +5,118 @@
  * =============================================================================
  */
 var Order = require('../../models/order.js');
-var ArtistController = require('../artists/artist.controller.js');
-var VolunteerController = require('../volunteers/volunteer.controller.js');
-var BuyerController = require('../buyers/buyer.controller.js');
+var Buyer = require('../../models/buyer.js');
+var Artist = require('../../models/artist.js');
+var Volunteer = require('../../models/volunteer.js');
 var Q = require('q');
+
+/** 
+ * =============================================================================
+ * Private Functions
+ * =============================================================================
+ */
+function getArtistForOrder(id){
+
+	var p = Q.defer();
+
+	Artist.findOne({_id: id})
+		.then(function(result){
+			p.resolve(result);
+		}, function(err){
+			p.reject(err);
+		});
+
+	return p.promise;
+}
+
+function getBuyerForOrder(id){
+
+	var p = Q.defer();
+
+	Buyer.findOne({ _id: id })
+		.then(function(result){
+			p.resolve(result);
+		}, function(error){
+			p.reject(error);
+		});
+
+	return p.promise;
+}
+
+function getVolunteerForOrder(id) {
+
+	var p = Q.defer();
+
+	Volunteer.findOne({_id: id})
+		.then(function(result){
+			p.resolve(result);
+		}, function(err){
+			p.reject(err);
+		});
+
+	return p.promise;
+}
 
 /** 
  * =============================================================================
  * Public Functions
  * =============================================================================
  */
-exports.getOrder = function(req, res) {
-	Order.findOne({ _id: req.id})
-	.then(function(order){
-		console.log(order);
-	}, function(err){
-		console.log(err);
-	});
+exports.getOrderById = function(req, res) {
+	Order.findOne({ _id: req.params.id})
+		.then(function(order){
+			res.json(order);
+		}, function(err){
+			res.send(err);
+		});
 }
 
 exports.getAllOrders = function(req, res){
 	Order.find({})
-	.then(function(orders){
-		res.send(orders);
-	}, function(error){
-		res.send(error);
-	});
+		.then(function(orders){
+			res.send(orders);
+		}, function(error){
+			res.send(error);
+		});
 }
 
+exports.updateOrder = function(req, res){
+	Order.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, result){
+		if(err) res.send(err);
+		else {
+			res.json({message: "Order updated!", result});
+		}
+	});
+}
 exports.createOrder = function(req, res) {
 
 	var promises = [];
-	promises.push(BuyerController.getBuyerForOrder(req.buyerId));
-	promises.push(ArtistController.getArtistForOrder(req.artistId));
-	promises.push(VolunteerController.getVolunteerForOrder(req.volunteerId));
+
+	promises.push(getBuyerForOrder(req.body.buyer));
+	promises.push(getArtistForOrder(req.body.artist));
+	promises.push(getVolunteerForOrder(req.olunteer));
 
 	Q.all(promises).then(function(results){
 
 		var o = new Order();
-		o.id = req.id;
-		o.description = req.description;
-		o.price = req.price;
-		o.shipping = req.shipping;
+		o.id = req.body.id;
+		o.price = req.body.price;
 		o.buyer = results[0]._id;
 		o.artist = results[1]._id;
 		o.volunteer = results[2]._id;
 
-		o.save(function(err, order){
-			if(err){
-				res.send(err);
-				console.log(err);
-			}
+		o.save(function(err, result){
+			if(err) res.send(err)
 			else {
-				res.send("Successfully Created Order");
-				console.log(order);
+				res.json({message: "Order successfully added", result});
 			}
 		});
+	});
+}
+
+exports.removeOrderById = function(req, res){
+	Order.findOneAndRemove({ _id: req.params.id}, function(err, result){
+		if(err) res.send(err);
+		res.json({message: "Order successfully deleted!", result});
 	});
 }

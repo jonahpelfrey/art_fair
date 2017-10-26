@@ -13,22 +13,6 @@ var Q = require('q');
  * Public Functions
  * =============================================================================
  */
-exports.getVolunteerForOrder = function(id) {
-
-	var p = Q.defer();
-
-	Volunteer.findOne({_id: id})
-	.then(function(volunteer){
-		p.resolve(volunteer);
-		console.log(volunteer);
-	}, function(err){
-		p.reject(err);
-		console.log(err);
-	});
-
-	return p.promise;
-}
-
 exports.getVolunteerById = function(req, res){
 	Volunteer.findOne({ _id: req.params.id })
 		.then(function(volunteer){

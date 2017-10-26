@@ -28,22 +28,6 @@ exports.getTest = function(req, res){
 	
 }
 
-exports.getBuyerForOrder = function(id){
-
-	var p = Q.defer();
-
-	Buyer.findOne({ _id: id })
-	.then(function(buyer){
-		p.resolve(buyer);
-		console.log(buyer);
-	}, function(error){
-		p.reject(error);
-		console.log(error);
-	});
-
-	return p.promise;
-}
-
 exports.getBuyerById = function(req, res){
 	Buyer.findOne({ _id: req.params.id })
 		.then(function(buyer){
@@ -81,9 +65,7 @@ exports.createBuyer = function(req, res){
 	b.email = req.body.email;
 
 	b.save(function(err, result){
-		if(err){
-			res.send(err);
-		}
+		if(err) res.send(err);
 		else {
 			res.json({message: "Buyer successfully added!", result});
 		}

@@ -12,22 +12,6 @@ var Q = require('q');
  * Public Functions
  * =============================================================================
  */
-exports.getArtistForOrder = function(id){
-
-	var p = Q.defer();
-
-	Artist.findOne({_id: id})
-		.then(function(response){
-			p.resolve(response);
-			console.log(response);
-		}, function(err){
-			p.reject(err);
-			console.log(err);
-		});
-
-	return p.promise;
-}
-
 exports.getArtistById = function(req, res){
 	Artist.findOne({ _id: req.params.id})
 		.then(function(artist){
