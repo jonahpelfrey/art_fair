@@ -125,16 +125,18 @@
 		  <thead>
 			<tr>
 			  <th>ID</th>
-			  <th>Date</th>
 			  <th>Buyer</th>
+			  <th>Artist</th>
+			  <th>Volunteer</th>
 			  <th>Price</th>
 			</tr>
 		  </thead>
 		  <tbody>
 			<tr class="success" *ngFor="let order of orders">
 			  <td>{{order.refKey}}</td>
-			  <td>{{order.date}}</td>
 			  <td>{{order.buyer}}</td>
+			  <td>{{order.artist}}</td>
+			  <td>{{order.volunteer}}</td>
 			  <td>${{order.price}}</td>
 			</tr>
 		  </tbody>
