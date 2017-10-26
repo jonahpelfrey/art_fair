@@ -94,12 +94,12 @@ exports.createOrder = function(req, res) {
 
 	promises.push(getBuyerForOrder(req.body.buyer));
 	promises.push(getArtistForOrder(req.body.artist));
-	promises.push(getVolunteerForOrder(req.olunteer));
+	promises.push(getVolunteerForOrder(req.body.volunteer));
 
 	Q.all(promises).then(function(results){
 
 		var o = new Order();
-		o.id = req.body.id;
+		o.ref = req.body.ref;
 		o.price = req.body.price;
 		o.buyer = results[0]._id;
 		o.artist = results[1]._id;
@@ -108,7 +108,7 @@ exports.createOrder = function(req, res) {
 		o.save(function(err, result){
 			if(err) res.send(err)
 			else {
-				res.json({message: "Order successfully added", result});
+				res.json({message: "Order successfully added!", result});
 			}
 		});
 	});
@@ -117,6 +117,8 @@ exports.createOrder = function(req, res) {
 exports.removeOrderById = function(req, res){
 	Order.findOneAndRemove({ _id: req.params.id}, function(err, result){
 		if(err) res.send(err);
-		res.json({message: "Order successfully deleted!", result});
+		else {
+			res.json({message: "Order successfully deleted!", result});
+		}
 	});
 }

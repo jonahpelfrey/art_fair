@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 
 var orderSchema = new Schema({
 
-	id: {
+	ref: {
 		type: Number,
 		required: true,
 		default: 0
