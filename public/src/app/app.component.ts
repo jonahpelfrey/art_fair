@@ -10,7 +10,7 @@ import { DataService } from './data.service';
 
 export class AppComponent {
 
-    users: Array<any>;
+    artists: Array<any>;
     title = 'Art Fair';
 
     item: Item = {
@@ -20,8 +20,8 @@ export class AppComponent {
 
     constructor(private dataService: DataService){
 
-        this.dataService.getUsers()
-            .subscribe(res => this.users = res);
+        this.dataService.getArtists()
+            .subscribe(res => this.artists = res);
     }
 
 }
