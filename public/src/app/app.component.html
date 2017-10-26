@@ -44,67 +44,25 @@
 
 <div class="container">
 
-<div class="row">
-	<ul>
-	  <li *ngFor="let artist of artists">{{ artist.lastName }}</li>
-	</ul>
-</div>
-
 
 <!-- TABLE -->
 <div class="row">
 	<div class="col-12">
-		<table class="table table-striped table-hover ">
+		<table class="table table-striped table-hover">
 		  <thead>
 			<tr>
 			  <th>#</th>
-			  <th>Column heading</th>
-			  <th>Column heading</th>
-			  <th>Column heading</th>
+			  <th>First Name</th>
+			  <th>Last Name</th>
+			  <th>ID</th>
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr>
-			  <td>1</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr>
-			  <td>2</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr class="info">
-			  <td>3</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr class="success">
+			<tr class="success" *ngFor="let artist of artists">
 			  <td>4</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr class="danger">
-			  <td>5</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr class="warning">
-			  <td>6</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			</tr>
-			<tr class="active">
-			  <td>7</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
-			  <td>Column content</td>
+			  <td>{{artist.firstName}}</td>
+			  <td>{{artist.lastName}}</td>
+			  <td>{{artist._id}}</td>
 			</tr>
 		  </tbody>
 		</table> 

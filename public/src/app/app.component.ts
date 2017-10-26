@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
 import { Observable } from "rxjs/Observable";
 import { HttpClient } from '@angular/common/http';
@@ -17,18 +17,17 @@ export class AppComponent {
     title = 'Art Fair';
 
 
-    constructor(private http: HttpClient, private dataService: DataService) {
+    constructor(private http: HttpClient, private dataService: DataService) { 
 
+    }
+
+    ngOnInit() {
         this.dataService.getArtists()
             .subscribe(
                 res => this.artists = res,
                 err => console.log(err)
             );
-
     }
-
-
-
 
 }
 
