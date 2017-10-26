@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-
 import { DataService } from './data.service';
+import {Observable} from "rxjs/Observable";
+import { HttpClient } from '@angular/common/http';
+import { Artist, Volunteer } from './models';
 
 @Component({
     selector: 'app-root',
@@ -8,9 +10,10 @@ import { DataService } from './data.service';
     styleUrls: ['./app.component.css']
 })
 
+
 export class AppComponent {
 
-    artists: Array<any>;
+    artists: Array<Artist>;
     title = 'Art Fair';
 
     item: Item = {
@@ -18,11 +21,21 @@ export class AppComponent {
   	    name: 'Painting'
     };
 
-    constructor(private dataService: DataService){
+    constructor(private http: HttpClient, private dataService: DataService) {
 
         this.dataService.getArtists()
-            .subscribe(res => this.artists = res);
+            .subscribe(res => {this.artists = res; console.log(this.artists);});
+
     }
+
+        
+    // ngOnInit(): void {
+    //     this.http.get<Artist[]>('/api/artists').subscribe
+    //     (data => {
+    //           this.artists = data;
+    //     });
+    // }
+
 
 }
 

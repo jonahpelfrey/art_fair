@@ -99,7 +99,7 @@ exports.createOrder = function(req, res) {
 	Q.all(promises).then(function(results){
 
 		var o = new Order();
-		o.ref = req.body.ref;
+		o.refKey = req.body.refKey;
 		o.price = req.body.price;
 		o.buyer = results[0]._id;
 		o.artist = results[1]._id;

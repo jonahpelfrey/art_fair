@@ -47,7 +47,7 @@ describe('Orders', () => {
 
 			Q.all(promises).then(function(results){
 				let order = {
-					ref: 123,
+					refKey: 123,
 					artist: results[0]._id,
 					volunteer: results[1]._id,
 					buyer: results[2]._id,
@@ -84,7 +84,7 @@ describe('Orders', () => {
 
 			Q.all(promises).then(function(results){
 				let order = {
-					ref: 123,
+					refKey: 123,
 					artist: results[0]._id,
 					volunteer: results[1]._id,
 					buyer: results[2]._id,
@@ -97,7 +97,7 @@ describe('Orders', () => {
 						res.should.have.status(200);
 						res.body.should.be.an('object');
 						res.body.should.have.property('message').eql('Order successfully added!');
-						res.body.result.should.have.property('ref');
+						res.body.result.should.have.property('refKey');
 						res.body.result.should.have.property('artist');
 						res.body.result.should.have.property('volunteer');
 						res.body.result.should.have.property('buyer');
@@ -125,7 +125,7 @@ describe('Orders', () => {
 
 			Q.all(promises).then(function(results){
 				let order = new Order({
-					ref: 123,
+					refKey: 123,
 					artist: results[0]._id,
 					volunteer: results[1]._id,
 					buyer: results[2]._id,
@@ -138,7 +138,7 @@ describe('Orders', () => {
 						.end( (err, res) => {
 							res.should.have.status(200);
 							res.body.should.be.an('object');
-							res.body.should.have.property('ref');
+							res.body.should.have.property('refKey');
 							res.body.should.have.property('artist');
 							res.body.should.have.property('volunteer');
 							res.body.should.have.property('buyer');
@@ -165,7 +165,7 @@ describe('Orders', () => {
 
 			Q.all(promises).then(function(results){
 				let order = new Order({
-					ref: 123,
+					refKey: 123,
 					artist: results[0]._id,
 					volunteer: results[1]._id,
 					buyer: results[2]._id,
@@ -174,12 +174,12 @@ describe('Orders', () => {
 				order.save( (err, order) => {
 					chai.request(app)
 						.put('/api/orders/' + order.id)
-						.send({ref: 456})
+						.send({refKey: 456})
 						.end( (err, res) => {
 							res.should.have.status(200);
 							res.body.should.be.an('object');
 							res.body.should.have.property('message').eql('Order updated!');
-							res.body.result.should.have.property('ref').eql(456);
+							res.body.result.should.have.property('refKey').eql(456);
 							done();
 						});
 				});
@@ -201,7 +201,7 @@ describe('Orders', () => {
 
 			Q.all(promises).then(function(results){
 				let order = new Order({
-					ref: 123,
+					refKey: 123,
 					artist: results[0]._id,
 					volunteer: results[1]._id,
 					buyer: results[2]._id,

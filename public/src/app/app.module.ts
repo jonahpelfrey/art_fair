@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DataService } from './data.service';
+import { ArtistInterceptor } from './artist.interceptor';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,13 @@ import { DataService } from './data.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
-  providers: [DataService],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: ArtistInterceptor,
+    multi: true
+  }, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

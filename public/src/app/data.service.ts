@@ -1,35 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { Artist, Volunteer, Buyer, Order } from './models';
 import 'rxjs/add/operator/map';
+import * as _ from 'lodash';
+
 
 @Injectable()
 export class DataService {
 
-	artists: any;
-	volunteers: any;
-	buyers: any;
-	orders: any; 
+	constructor(private http: HttpClient) { }
 
-  	constructor(private http: Http) { }
+	getArtists(){
+		return this.http.get<Artist[]>('/api/artists')
+			.map(data => data);
+	}
 
-  	getArtists(){
-	    return this.http.get("/api/artists")
-	    	.map(result => this.artists = result.json());
-  	}
+	getVolunteers(){
+		return this.http.get<Volunteer[]>('/api/volunteers')
+			.map(data => data);
+	}
 
-  	getVolunteers(){
-  		return this.http.get("/api/volunteers")
-  			.map(result => this.volunteers = result.json());
-  	}
+	getBuyers(){
+		return this.http.get<Buyer[]>('/api/buyers')
+			.map(data => data);
+	}
 
-  	getBuyers(){
-  		return this.http.get("/api/buyers")
-  			.map(result => this.buyers = result.json());
-  	}
-
-  	getOrders(){
-  		return this.http.get("/api/orders")
-  			.map(result => this.orders = result.json());
-  	}
+	getOrders(){
+		return this.http.get<Order[]>('/api/orders')
+			.map(data => data);
+	}
 
 }

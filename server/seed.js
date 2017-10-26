@@ -86,7 +86,7 @@ function createOrder(){
 	var p = Q.defer();
 
 	var o = new Order();
-	o.ref = 567;
+	o.refKey = 567;
 	o.description = "This is a new order";
 	o.price = 100;
 
