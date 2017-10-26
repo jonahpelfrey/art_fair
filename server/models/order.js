@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Artist = require('./artist.js');
 var Volunteer = require('./volunteer.js');
 var Buyer = require('./buyer.js');
-var Schema = mongoose.Schema;
+var Schema = mongoose.Schema; 
 
 var orderSchema = new Schema({
 
@@ -12,11 +12,11 @@ var orderSchema = new Schema({
 		default: 0
 	},
 
-	artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist' },
+	artist: { type: mongoose.Schema.Types.ObjectId, ref: 'Artist', required: true },
 
-	volunteer: { type: mongoose.Schema.Types.ObjectId, ref: 'Volunteer'},
+	volunteer: { type: mongoose.Schema.Types.ObjectId, ref: 'Volunteer', required: true},
 
-	buyer: { type: mongoose.Schema.Types.ObjectId, ref: 'Buyer'},
+	buyer: { type: mongoose.Schema.Types.ObjectId, ref: 'Buyer', required: true},
 
 	date: {
 		type: Date,
@@ -28,7 +28,8 @@ var orderSchema = new Schema({
 	},
 
 	price: {
-		type: Number
+		type: Number,
+		required: true
 	},
 
 	shipping: {

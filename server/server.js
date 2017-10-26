@@ -91,7 +91,7 @@ app.use('/api/artists', require('./api/artists/route'));
 app.use('/api/orders', require('./api/orders/route'));
 app.use('/api/volunteers', require('./api/volunteers/route'));
 app.use('/api/dashboard', require('./api/general/route'));
-app.use('/', require('./api/auth/route'));
+
 
 
 /** 

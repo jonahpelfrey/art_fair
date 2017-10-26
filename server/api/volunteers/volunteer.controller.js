@@ -29,38 +29,52 @@ exports.getVolunteerForOrder = function(id) {
 	return p.promise;
 }
 
-exports.getVolunteer = function(req, res){
-	Volunteer.findOne({ _id: req.id })
-	.then(function(volunteer){
-		res.send(volunteer);
-	}, function(error){
-		res.send(error);
-	});
+exports.getVolunteerById = function(req, res){
+	Volunteer.findOne({ _id: req.params.id })
+		.then(function(volunteer){
+			res.json(volunteer);
+		}, function(error){
+			res.send(error);
+		});
 }
 
 exports.getAllVolunteers = function(req, res){
-	Volunteer.find()
-	.then(function(volunteers){
-		res.send(volunteers);
-	}, function(error){
-		res.send(error);
+	Volunteer.find({})
+		.then(function(volunteers){
+			res.send(volunteers);
+		}, function(error){
+			res.send(error);
+		});
+}
+
+exports.updateVolunteer = function(req, res){
+	Volunteer.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, result){
+		if(err) res.send(err);
+		else {
+			res.json({message: "Volunteer updated!", result});
+		}
 	});
 }
 
 exports.createVolunteer = function(req, res) {
 
 	var v = new Volunteer();
-	v.firstName = req.firstName;
-	v.lastName = req.lastName;
+	v.firstName = req.body.firstName;
+	v.lastName = req.body.lastName;
 
-	v.save(function(err, volunteer){
-		if(err){
-			res.send(err);
-			console.log(err);
-		}
+	v.save(function(err, result){
+		if(err) res.send(err);
 		else {
-			res.send("Successfully Created Volunteer");
-			console.log(volunteer);
+			res.json({message: "Volunteer successfully added!", result});
+		}
+	});
+}
+
+exports.removeVolunteerById = function(req, res){
+	Volunteer.findOneAndRemove({ _id: req.params.id}, function(err, result){
+		if(err) res.send(err);
+		else {
+			res.json({message: "Volunteer successfully deleted!", result});
 		}
 	});
 }

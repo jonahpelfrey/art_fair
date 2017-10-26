@@ -15,8 +15,6 @@ var router = express.Router();
  * Routes
  * =============================================================================
  */
-router.get('/orders/:id', controller.getOrder);
-router.get('/orders/all', controller.getOrders);
-router.post('orders/create', controller.createOrder);
+router.get('/', controller.getAllOrders)
 
 module.exports = router;

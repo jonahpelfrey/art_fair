@@ -65,7 +65,9 @@ exports.getAllBuyers = function(req, res){
 exports.updateBuyer = function(req, res){
 	Buyer.findOneAndUpdate({ _id: req.params.id}, req.body, {new: true}, function(err, result){
 		if(err) res.send(err);
-		res.json({message: "Buyer updated!", result});;
+		else {
+			res.json({message: "Buyer updated!", result});
+		}
 	});
 }
 

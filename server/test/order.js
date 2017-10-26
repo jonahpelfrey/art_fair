@@ -16,5 +16,18 @@ describe('Orders', () => {
 	});
 
 
+	describe('/GET orders', () => {
+		it('it should GET all orders', (done) => {
+			chai.request(app)
+				.get('/api/orders')
+				.end( (err, res) => {
+					res.should.have.status(200);
+					res.body.should.be.an('array');
+					res.body.length.should.be.eql(0);
+					done();
+				});
+		});
+	});
+
 	
-})
+});    

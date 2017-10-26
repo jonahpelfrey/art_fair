@@ -24,8 +24,8 @@ exports.getOrder = function(req, res) {
 	});
 }
 
-exports.getOrders = function(req, res){
-	Order.find()
+exports.getAllOrders = function(req, res){
+	Order.find({})
 	.then(function(orders){
 		res.send(orders);
 	}, function(error){
