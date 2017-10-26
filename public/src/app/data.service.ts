@@ -18,24 +18,6 @@ export class DataService {
 			.catch(this.handleError);
 	}
 
-	getArtistById(id: string): Observable<Artist> {
-		return this.http.get<Artist>('/api/artists/' + id)
-			.map(data => data)
-			.catch(this.handleError);
-	}
-
-	addArtist(artist: Artist): Observable<Artist> {
-		return this.http.post('/api/artists', artist)
-			.map((data: Artist) => data)
-			.catch(this.handleError);
-	}
-
-	removeArtistById(id: string): Observable<Artist> {
-		return this.http.delete('/api/artists/' + id)
-			.map((data: Artist) => data)
-			.catch(this.handleError);
-	}
-
 	getVolunteers(): Observable<Volunteer[]> {
 		return this.http.get<Volunteer[]>('/api/volunteers')
 			.map(data => data)
@@ -54,8 +36,14 @@ export class DataService {
 			.catch(this.handleError);
 	}
 
-	 private handleError(error: Response) {
-         return Observable.throw(error.statusText);
-     }
+	addArtist(artist: Artist): Observable<Artist> {
+		return this.http.post('/api/artists', artist)
+			.map((data: Artist) => data)
+			.catch(this.handleError);
+	}
+
+ 	private handleError(error: Response) {
+    	return Observable.throw(error.statusText);
+ 	}
 
 }

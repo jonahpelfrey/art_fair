@@ -81,26 +81,6 @@ function createBuyer(){
 
 }
 
-function createOrder(){
-
-	var p = Q.defer();
-
-	var o = new Order();
-	o.refKey = 567;
-	o.description = "This is a new order";
-	o.price = 100;
-
-	o.save(function(err, order){
-		if(err) {
-			console.log(err);
-			p.reject(err);
-		}
-
-		else p.resolve(order);
-	});
-
-	return p.promise;
-}
 
 /** 
  * =============================================================================
@@ -113,29 +93,22 @@ exports.generateModels = function(){
 	promises.push(createBuyer());
 	promises.push(createArtist());
 	promises.push(createVolunteer());
-	promises.push(createOrder());
 
 	Q.all(promises).then(function(results){
 
-		console.log("Buyer: " + results[0]._id);
-		console.log("Artist: " + results[1]._id);
-		console.log("Volunteer: " + results[2]._id);
+		// console.log("Buyer: " + results[0]._id);
+		// console.log("Artist: " + results[1]._id);
+		// console.log("Volunteer: " + results[2]._id);
+		var order = new Order();
+		order.buyer = results[0]._id;
+		order.artist = results[1]._id;
+		order.volunteer = results[2]._id;
+		order.refKey = 456;
+		order.price = 1000;
 
-		var id = results[3]._id;
-		Order.findOne({ _id: id })
-		.then(function(order){
-
-			order.buyer = results[0]._id;
-			order.artist = results[1]._id;
-			order.volunteer = results[2]._id;
-
-			order.save(function(error, order){
-				if(error) console.log(error);
-				else { console.log(order); }
-			});
-
-		}, function(error){
-			console.log(error);
+		order.save(function(error, order){
+			if(error) console.log(error);
+			else { console.log(order); }
 		});
 	});
 }
