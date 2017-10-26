@@ -106,7 +106,7 @@ exports.createOrder = function(req, res) {
 		o.volunteer = results[2]._id;
 
 		o.save(function(err, result){
-			if(err) res.send(err)
+			if(err) res.status(400).send(err)
 			else {
 				res.json({message: "Order successfully added!", result});
 			}

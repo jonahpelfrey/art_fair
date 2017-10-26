@@ -65,7 +65,7 @@ exports.createBuyer = function(req, res){
 	b.email = req.body.email;
 
 	b.save(function(err, result){
-		if(err) res.send(err);
+		if(err) res.status(400).send(err);
 		else {
 			res.json({message: "Buyer successfully added!", result});
 		}

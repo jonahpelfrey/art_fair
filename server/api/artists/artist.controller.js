@@ -45,7 +45,7 @@ exports.createArtist = function(req, res){
 
 	a.save(function(err, result){
 		if(err){
-			res.send(err);
+			res.status(400).send(err);
 		}
 		else {
 			res.json({message: "Artist successfully added!", result });

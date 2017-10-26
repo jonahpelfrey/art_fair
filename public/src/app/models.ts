@@ -1,6 +1,7 @@
 export interface Artist {
 
 	firstName: string;
+	lastName: string;
 }
 
 export interface Volunteer {

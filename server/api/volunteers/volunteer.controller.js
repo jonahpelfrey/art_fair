@@ -47,7 +47,7 @@ exports.createVolunteer = function(req, res) {
 	v.lastName = req.body.lastName;
 
 	v.save(function(err, result){
-		if(err) res.send(err);
+		if(err) res.status(400).send(err);
 		else {
 			res.json({message: "Volunteer successfully added!", result});
 		}

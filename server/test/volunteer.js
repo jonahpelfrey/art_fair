@@ -38,7 +38,7 @@ describe('Volunteers', () => {
 				.post('/api/volunteers')
 				.send(volunteer)
 				.end( (err, res) => {
-					res.should.have.status(200);
+					res.should.have.status(400);
 					res.body.should.be.an('object');
 					res.body.should.have.property('errors');
 					res.body.errors.should.have.property('lastName');
