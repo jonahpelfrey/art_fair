@@ -9,6 +9,7 @@ var express 	= require('express');
 var Q 			= require('q');
 var app 		= express();
 var morgan 		= require('morgan');
+var path		= require('path');
 var mongoose 	= require('mongoose');
 var bodyParser 	= require('body-parser');
 var server 		= require('http').createServer(app);
@@ -53,7 +54,7 @@ db.once('open', function() {
 * Config
 * =============================================================================
 */
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(path.join(__dirname, '/../public/dist'))); 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 module.exports = app;
@@ -93,7 +94,9 @@ app.use('/api/orders', require('./api/orders/route'));
 app.use('/api/volunteers', require('./api/volunteers/route'));
 app.use('/api/dashboard', require('./api/general/route'));
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '/../public/dist/index.html'));
+});
 
 /** 
 * =============================================================================
