@@ -12,7 +12,8 @@ import { Artist, Volunteer, Buyer, Order } from './models';
 
 export class AppComponent {
 
-    artists: Array<Artist>;
+    artist: Artist;
+    // artists: Observable<Artist[]>;
     volunteers: Array<Volunteer>;
     buyers: Array<Buyer>;
     orders: Array<Order>;
@@ -22,11 +23,9 @@ export class AppComponent {
     constructor(private http: HttpClient, private dataService: DataService) {}
 
     ngOnInit() {
-        this.dataService.getArtists()
-            .subscribe(
-                res => this.artists = res,
-                err => console.log(err)
-            );
+
+        // this.artists = this.dataService.artists;
+        this.dataService.getArtists();
 
         this.dataService.getVolunteers()
             .subscribe(
@@ -45,6 +44,15 @@ export class AppComponent {
                 res => this.orders = res,
                 err => console.log(err)
             );
+    }
+
+    addArtist() {
+        this.artist = {
+            firstName: "IT",
+            lastName: "WORKED"
+        }
+
+        this.dataService.addArtist(this.artist);
     }
 
 }

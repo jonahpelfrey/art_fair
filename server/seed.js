@@ -22,7 +22,7 @@ exports.testHash = function(){
 	} 
 	else {
  		
- 		console.log('Passwords do not match');
+ 		console.log('Passwords do not match each other');
 	}
 }
 

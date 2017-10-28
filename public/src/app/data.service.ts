@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Artist, Volunteer, Buyer, Order } from './models';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,12 +11,46 @@ import * as _ from 'lodash';
 @Injectable()
 export class DataService {
 
-	constructor(private http: HttpClient) { }
+	private _artists: BehaviorSubject<Artist[]> = new BehaviorSubject([]);
+	artistList: Artist[];
 
-	getArtists(): Observable<Artist[]> {
-		return this.http.get<Artist[]>('/api/artists')
-			.map(data => data)
-			.catch(this.handleError);
+	buyers: Observable<Buyer[]>;
+	private _buyers: BehaviorSubject<Buyer[]>;
+
+	volunteers: Observable<Volunteer[]>;
+	private _volunteers: BehaviorSubject<Volunteer[]>;
+
+	orders: Observable<Order[]>;
+	private _orders: BehaviorSubject<Order[]>;
+
+	private dataStore: {
+		artists: Artist[];
+		buyers: Buyer[];
+		volunteers: Volunteer[];
+		orders: Order[];
+	}
+
+	constructor(private http: HttpClient) {
+
+		this.dataStore = { artists: [], buyers: [], volunteers: [], orders: [] };
+	}
+
+	get artists() {
+        return this._artists.asObservable();
+    }
+
+	getArtists() {
+		this.http.get<Artist[]>('/api/artists').subscribe(res => {
+			this.artistList = res;
+			this._artists.next(this.artistList);
+		}, err => this.handleError);
+	}
+
+	addArtist(artist: Artist) {
+		this.http.post<Artist>('/api/artists', artist).subscribe(res => {
+			this.artistList.push(artist);
+			this._artists.next(this.artistList);
+		}, err => this.handleError);
 	}
 
 	getVolunteers(): Observable<Volunteer[]> {
@@ -33,12 +68,6 @@ export class DataService {
 	getOrders(): Observable<Order[]> {
 		return this.http.get<Order[]>('/api/orders')
 			.map(data => data)
-			.catch(this.handleError);
-	}
-
-	addArtist(artist: Artist): Observable<Artist> {
-		return this.http.post('/api/artists', artist)
-			.map((data: Artist) => data)
 			.catch(this.handleError);
 	}
 

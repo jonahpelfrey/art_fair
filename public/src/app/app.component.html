@@ -44,6 +44,10 @@
 
 <div class="container">
 
+
+<div class="row">
+	<button class="btn btn-primary btn-lg" (click)="addArtist()">Add Artist</button>
+</div>
 <!-- TABLE -->
 <div class="row">
 	<h5>Artists</h5>
@@ -57,7 +61,7 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr class="success" *ngFor="let artist of artists">
+			<tr class="success" *ngFor="let artist of dataService.artists | async">
 			  <td>{{artist.firstName}}</td>
 			  <td>{{artist.lastName}}</td>
 			  <td>{{artist._id}}</td>
