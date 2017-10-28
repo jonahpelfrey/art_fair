@@ -11,33 +11,30 @@ import * as _ from 'lodash';
 @Injectable()
 export class DataService {
 
+	private artistList: Artist[];
 	private _artists: BehaviorSubject<Artist[]> = new BehaviorSubject([]);
-	artistList: Artist[];
+	public readonly artists: Observable<Artist[]> = this._artists.asObservable();
+	
+	private buyerList: Buyer[];
+	private _buyers: BehaviorSubject<Buyer[]> = new BehaviorSubject([]);
+	public readonly buyers: Observable<Buyer[]> = this._buyers.asObservable();
 
-	buyers: Observable<Buyer[]>;
-	private _buyers: BehaviorSubject<Buyer[]>;
+	private orderList: Order[];
+	private _orders: BehaviorSubject<Order[]> = new BehaviorSubject([]);
+	public readonly orders: Observable<Order[]> = this._orders.asObservable();
 
-	volunteers: Observable<Volunteer[]>;
-	private _volunteers: BehaviorSubject<Volunteer[]>;
+	private volunteerList: Volunteer[];
+	private _volunteers: BehaviorSubject<Volunteer[]> = new BehaviorSubject([]);
+	public readonly volunteers: Observable<Volunteer[]> = this._volunteers.asObservable();
 
-	orders: Observable<Order[]>;
-	private _orders: BehaviorSubject<Order[]>;
+	constructor(private http: HttpClient) {}
 
-	private dataStore: {
-		artists: Artist[];
-		buyers: Buyer[];
-		volunteers: Volunteer[];
-		orders: Order[];
+	addArtist(artist: Artist) {
+		this.http.post('/api/artists', artist).subscribe((res: any) => {
+			this.artistList.push(res.result);
+			this._artists.next(this.artistList);
+		}, err => this.handleError);
 	}
-
-	constructor(private http: HttpClient) {
-
-		this.dataStore = { artists: [], buyers: [], volunteers: [], orders: [] };
-	}
-
-	get artists() {
-        return this._artists.asObservable();
-    }
 
 	getArtists() {
 		this.http.get<Artist[]>('/api/artists').subscribe(res => {
@@ -46,29 +43,39 @@ export class DataService {
 		}, err => this.handleError);
 	}
 
-	addArtist(artist: Artist) {
-		this.http.post<Artist>('/api/artists', artist).subscribe(res => {
-			this.artistList.push(artist);
+	getBuyers() {
+		this.http.get<Buyer[]>('/api/buyers').subscribe(res => {
+			this.buyerList = res;
+			this._buyers.next(this.buyerList);
+		}, err => this.handleError);
+	}
+
+	getOrders() {
+		this.http.get<Order[]>('/api/orders').subscribe(res => {
+			this.orderList = res;
+			this._orders.next(this.orderList);
+		}, err => this.handleError);
+	}
+
+	getVolunteers() {
+		this.http.get<Artist[]>('/api/volunteers').subscribe(res => {
+			this.volunteerList = res;
+			this._volunteers.next(this.volunteerList);
+		}, err => this.handleError);
+	}
+
+	removeArtist(index: number, artist: any) {
+		this.http.delete('/api/artists/' + artist._id).subscribe((res: any) => {
+			this.artistList.splice(index, 1);
 			this._artists.next(this.artistList);
 		}, err => this.handleError);
 	}
 
-	getVolunteers(): Observable<Volunteer[]> {
-		return this.http.get<Volunteer[]>('/api/volunteers')
-			.map(data => data)
-			.catch(this.handleError);
-	}
-
-	getBuyers(): Observable<Buyer[]> {
-		return this.http.get<Buyer[]>('/api/buyers')
-			.map(data => data)
-			.catch(this.handleError);
-	}
-
-	getOrders(): Observable<Order[]> {
-		return this.http.get<Order[]>('/api/orders')
-			.map(data => data)
-			.catch(this.handleError);
+	loadAll() {
+		this.getArtists();
+		this.getBuyers();
+		this.getOrders();
+		this.getVolunteers();
 	}
 
  	private handleError(error: Response) {

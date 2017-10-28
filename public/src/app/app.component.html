@@ -58,13 +58,15 @@
 			  <th>First Name</th>
 			  <th>Last Name</th>
 			  <th>ID</th>
+			  <th>Remove</th>
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr class="success" *ngFor="let artist of dataService.artists | async">
+			<tr class="success" *ngFor="let i = index; let artist of artists | async">
 			  <td>{{artist.firstName}}</td>
 			  <td>{{artist.lastName}}</td>
 			  <td>{{artist._id}}</td>
+			  <td><button class="btn btn-danger" (click)="removeArtist(i, artist)">Remove</button></td>
 			</tr>
 		  </tbody>
 		</table> 
@@ -85,7 +87,7 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr class="success" *ngFor="let volunteer of volunteers">
+			<tr class="success" *ngFor="let volunteer of volunteers | async">
 			  <td>{{volunteer.firstName}}</td>
 			  <td>{{volunteer.lastName}}</td>
 			  <td>{{volunteer._id}}</td>
@@ -109,7 +111,7 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr class="success" *ngFor="let buyer of buyers">
+			<tr class="success" *ngFor="let buyer of buyers | async">
 			  <td>{{buyer.firstName}}</td>
 			  <td>{{buyer.lastName}}</td>
 			  <td>{{buyer._id}}</td>
@@ -135,7 +137,7 @@
 			</tr>
 		  </thead>
 		  <tbody>
-			<tr class="success" *ngFor="let order of orders">
+			<tr class="success" *ngFor="let order of orders | async">
 			  <td>{{order.refKey}}</td>
 			  <td>{{order.buyer}}</td>
 			  <td>{{order.artist}}</td>
