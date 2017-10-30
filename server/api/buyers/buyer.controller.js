@@ -63,6 +63,7 @@ exports.createBuyer = function(req, res){
 	b.address = req.body.address;
 	b.phoneNumber = req.body.phoneNumber;
 	b.email = req.body.email;
+	b.member = req.body.member;
 
 	b.save(function(err, result){
 		if(err) res.status(400).send(err);

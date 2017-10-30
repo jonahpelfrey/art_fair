@@ -246,7 +246,8 @@ function buyerSeed(){
 			zip: 53703
 		},
 		phoneNumber: "651-323-3033",
-		email: "jim@gmail.com"
+		email: "jim@gmail.com",
+		member: false
 	});
 
 	buyer.save(function(err, result){

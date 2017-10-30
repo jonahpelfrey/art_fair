@@ -38,9 +38,10 @@ describe('Buyers', () => {
 					street: "Main St",
 					city: "Madison",
 					state: "WI",
-					zip: 53703
+					zip: 53703,
 				},
-				phoneNumber: "651-323-3033"
+				phoneNumber: "651-323-3033",
+				member: false
 			}
 			chai.request(app)
 				.post('/api/buyers')
@@ -66,7 +67,8 @@ describe('Buyers', () => {
 					zip: 53703
 				},
 				phoneNumber: "651-323-3033",
-				email: "jim@gmail.com"
+				email: "jim@gmail.com",
+				member: false
 			}
 			chai.request(app)
 				.post('/api/buyers')
@@ -80,6 +82,7 @@ describe('Buyers', () => {
 					res.body.result.should.have.property('address');
 					res.body.result.should.have.property('phoneNumber');
 					res.body.result.should.have.property('email');
+					res.body.result.should.have.property('member');
 					done();
 				});
 		});
@@ -97,7 +100,8 @@ describe('Buyers', () => {
 					zip: 53703
 				},
 				phoneNumber: "651-323-3033",
-				email: "jim@gmail.com"
+				email: "jim@gmail.com",
+				member: false
 			});
 			buyer.save( (err, buyer) => {
 				chai.request(app)
@@ -111,6 +115,7 @@ describe('Buyers', () => {
 						res.body.should.have.property('address');
 						res.body.should.have.property('phoneNumber');
 						res.body.should.have.property('email');
+						res.body.should.have.property('member');
 						res.body.should.have.property('_id').eql(buyer.id);
 						done();
 					});
@@ -130,7 +135,8 @@ describe('Buyers', () => {
 					zip: 53703
 				},
 				phoneNumber: "651-323-3033",
-				email: "jim@gmail.com"
+				email: "jim@gmail.com",
+				member: false
 			});
 			buyer.save( (err, buyer) => {
 				chai.request(app)
@@ -160,7 +166,8 @@ describe('Buyers', () => {
 					zip: 53703
 				},
 				phoneNumber: "651-323-3033",
-				email: "jim@gmail.com"
+				email: "jim@gmail.com",
+				member: false
 			});
 			buyer.save( (err, buyer) => {
 				chai.request(app)

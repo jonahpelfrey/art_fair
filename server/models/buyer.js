@@ -43,6 +43,11 @@ var buyerSchema = new Schema({
 		required: true
 	},
 
+	member: {
+		type: Boolean,
+		required: true
+	},
+
 	orders: {
 		type: [{type: mongoose.Schema.Types.ObjectId, ref: 'Order'}],
 		default: []
