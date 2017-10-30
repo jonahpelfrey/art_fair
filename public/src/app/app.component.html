@@ -8,7 +8,7 @@
 	<span class="icon-bar"></span>
 	<span class="icon-bar"></span>
   </button>
-  <a class="navbar-brand" href="#">Brand</a>
+  <a class="navbar-brand" href="#">Moriah Art Fair</a>
 </div>
 
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -44,73 +44,74 @@
 
 <div class="container">
 
-<!-- 
 	<div class="row">
 		<div class="col-xs-12">
-			<button class="btn btn-primary btn-lg" (click)="addArtist()">Add Artist</button>
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h4 class="panel-title">Add Artist</h4>
+				</div>
+				<div class="panel-body">
+					<form class="form-horizontal">
+					  <fieldset>
+					  	<div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">First Name</label>
+					      <div class="col-lg-10">
+					        <input type="text" class="form-control" [(ngModel)]="artistForm.firstName" name="first" placeholder="John">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Last Name</label>
+					      <div class="col-lg-10">
+					        <input type="text" class="form-control" [(ngModel)]="artistForm.lastName" name="last" placeholder="Doe">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Username</label>
+					      <div class="col-lg-10">
+					        <input type="text" class="form-control" [(ngModel)]="artistForm.username" name="username">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+					      <div class="col-lg-10">
+					        <input type="email" class="form-control" [(ngModel)]="artistForm.email" name="email" placeholder="example@gmail.com">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Phone Number</label>
+					      <div class="col-lg-10">
+					        <input type="number" class="form-control" [(ngModel)]="artistForm.phoneNumber" name="phone">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Password</label>
+					      <div class="col-lg-10">
+					        <input type="password" class="form-control" [(ngModel)]="artistForm.password" name="password">
+					      </div>
+					    </div>
+
+					    <div class="form-group">
+					      <label for="inputEmail" class="col-lg-2 control-label">Signature</label>
+					      <div class="col-lg-10">
+					        <input type="text" class="form-control" [(ngModel)]="artistForm.signature" name="signature">
+					      </div>
+					    </div>
+					    
+					    <div class="form-group">
+					      <div class="col-xs-12" style="text-align: center;">
+					        <button type="submit" class="btn btn-primary" (click)="addArtist()">Submit</button>
+					      </div>
+					    </div>
+					  </fieldset>
+					</form>
+				</div>
+			</div>
 		</div>
-	</div> -->
-
-	<div class="row">
-		<form class="form-horizontal">
-		  <fieldset>
-
-		  	<div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">First Name</label>
-		      <div class="col-lg-10">
-		        <input type="text" class="form-control" [(ngModel)]="artistForm.firstName" name="first" placeholder="John">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Last Name</label>
-		      <div class="col-lg-10">
-		        <input type="text" class="form-control" [(ngModel)]="artistForm.lastName" name="last" placeholder="Doe">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Username</label>
-		      <div class="col-lg-10">
-		        <input type="text" class="form-control" [(ngModel)]="artistForm.username" name="username">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-		      <div class="col-lg-10">
-		        <input type="email" class="form-control" [(ngModel)]="artistForm.email" name="email" placeholder="example@gmail.com">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Phone Number</label>
-		      <div class="col-lg-10">
-		        <input type="number" class="form-control" [(ngModel)]="artistForm.phoneNumber" name="phone">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Password</label>
-		      <div class="col-lg-10">
-		        <input type="password" class="form-control" [(ngModel)]="artistForm.password" name="password">
-		      </div>
-		    </div>
-
-		    <div class="form-group">
-		      <label for="inputEmail" class="col-lg-2 control-label">Signature</label>
-		      <div class="col-lg-10">
-		        <input type="text" class="form-control" [(ngModel)]="artistForm.signature" name="signature">
-		      </div>
-		    </div>
-		    
-		    <div class="form-group">
-		      <div class="col-xs-4 col-xs-offset-4">
-		        <button type="submit" class="btn btn-primary" (click)="addArtist()">Submit</button>
-		      </div>
-		    </div>
-		  </fieldset>
-		</form>
 	</div>
 
 	<!-- TABLE -->
