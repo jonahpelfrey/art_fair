@@ -42,6 +42,11 @@ exports.createArtist = function(req, res){
 	var a = new Artist();
 	a.firstName = req.body.firstName;
 	a.lastName = req.body.lastName;
+	a.phoneNumber = req.body.phoneNumber;
+	a.email = req.body.email;
+	a.signature = req.body.signature;
+	a.username = req.body.username;
+	a.password = req.body.password;
 
 	a.save(function(err, result){
 		if(err){

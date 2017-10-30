@@ -283,8 +283,13 @@ function artistSeed(){
 	var p = Q.defer();
 
 	let artist = new Artist({
-		firstName: "Jane",
-		lastName: "Doe"
+		firstName: "John",
+		lastName: "Smith",
+		phoneNumber: 6514143023,
+		email: "artist@gmail.com",
+		signature: "mySignature",
+		username: "Jim1",
+		password: "jimspassword"
 	});
 
 	artist.save(function(err, result){

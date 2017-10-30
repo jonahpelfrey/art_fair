@@ -30,10 +30,15 @@ describe('Artists', () => {
 	});
 
 	describe('/POST artist', () => {
-		it('should NOT POST an artist without first and last name', (done) => {
+		it('should NOT POST an artist without all required fields', (done) => {
 
 			let artist = {
-				firstName: "Jim",
+				firstName: "John",
+				lastName: "Smith",
+				phoneNumber: 6514143023,
+				email: "artist@gmail.com",
+				signature: "mySignature",
+				username: "Jim1",
 			}
 			chai.request(app)
 				.post('/api/artists')
@@ -42,16 +47,21 @@ describe('Artists', () => {
 					res.should.have.status(400);
 					res.body.should.be.an('object');
 					res.body.should.have.property('errors');
-					res.body.errors.should.have.property('lastName');
-					res.body.errors.lastName.should.have.property('kind').eql('required');
+					res.body.errors.should.have.property('password');
+					res.body.errors.password.should.have.property('kind').eql('required');
 					done();
 				});
 		});
 		it('should POST an artist', (done) => {
 
 			let artist = {
-				firstName: "Jim",
-				lastName: "Smith"
+				firstName: "John",
+				lastName: "Smith",
+				phoneNumber: 6514143023,
+				email: "artist@gmail.com",
+				signature: "mySignature",
+				username: "Jim1",
+				password: "jimspassword"
 			}
 			chai.request(app)
 				.post('/api/artists')
@@ -62,6 +72,11 @@ describe('Artists', () => {
 					res.body.should.have.property('message').eql('Artist successfully added!');
 					res.body.result.should.have.property('firstName');
 					res.body.result.should.have.property('lastName');
+					res.body.result.should.have.property('phoneNumber');
+					res.body.result.should.have.property('email');
+					res.body.result.should.have.property('signature');
+					res.body.result.should.have.property('username');
+					res.body.result.should.have.property('password');
 					done();
 				});
 		});
@@ -70,7 +85,15 @@ describe('Artists', () => {
 
 	describe('/GET:id artist', () => {
 		it('should GET an artist by the given id', (done) => {
-			let artist = new Artist({ firstName: "John", lastName: "Smith"});
+			let artist = new Artist({
+				firstName: "John",
+				lastName: "Smith",
+				phoneNumber: 6514143023,
+				email: "artist@gmail.com",
+				signature: "mySignature",
+				username: "Jim1",
+				password: "jimspassword"
+			});
 			artist.save( (err, artist) => {
 				chai.request(app)
 					.get('/api/artists/' + artist.id)
@@ -80,6 +103,11 @@ describe('Artists', () => {
 						res.body.should.be.an('object');
 						res.body.should.have.property('firstName');
 						res.body.should.have.property('lastName');
+						res.body.should.have.property('phoneNumber');
+						res.body.should.have.property('email');
+						res.body.should.have.property('signature');
+						res.body.should.have.property('username');
+						res.body.should.have.property('password');
 						res.body.should.have.property('_id').eql(artist.id);
 						done();
 					});
@@ -90,7 +118,15 @@ describe('Artists', () => {
 
 	describe('/PUT:id artist', () => {
 		it('should UPDATE an artist, given the id', (done) => {
-			let artist = new Artist({firstName: "John", lastName: "Smith"});
+			let artist = new Artist({
+				firstName: "John",
+				lastName: "Smith",
+				phoneNumber: 6514143023,
+				email: "artist@gmail.com",
+				signature: "mySignature",
+				username: "Jim1",
+				password: "jimspassword"
+			});
 			artist.save( (err, artist) => {
 				chai.request(app)
 				.put('/api/artists/' + artist.id)
@@ -109,7 +145,15 @@ describe('Artists', () => {
 
 	describe('/DELETE:id artist', () => {
 		it('should DELETE an artist given the id', (done) => {
-			let artist = new Artist({firstName: "John", lastName: "Smith"});
+			let artist = new Artist({
+				firstName: "John",
+				lastName: "Smith",
+				phoneNumber: 6514143023,
+				email: "artist@gmail.com",
+				signature: "mySignature",
+				username: "Jim1",
+				password: "jimspassword"
+			});
 			artist.save( (err, artist) => {
 				chai.request(app)
 				.delete('/api/artists/' + artist.id)

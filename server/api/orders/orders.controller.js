@@ -142,7 +142,7 @@ exports.createOrder = function(req, res) {
 					.then(function(buyer){
 						res.json({message: "Order successfully added!", result});
 					}, function(error){
-						res.status(400).send(err);
+						res.status(400).send(error);
 					});
 			}
 		});
