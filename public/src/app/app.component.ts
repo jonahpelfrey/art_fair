@@ -12,6 +12,7 @@ import { Artist, Volunteer, Buyer, Order } from './models';
 
 export class AppComponent {
 
+    artistForm: any = {};
     artists: Observable<Artist[]>;
     buyers: Observable<Buyer[]>;
     orders: Observable<Order[]>;
@@ -32,13 +33,7 @@ export class AppComponent {
     }
 
     addArtist() {
-
-        let artist = {
-            firstName: "Jack",
-            lastName: "Johnson"
-        }
-
-        this.dataService.addArtist(artist);
+        this.dataService.addArtist(this.artistForm);
     }
 
     removeArtist(i: number, artist: any) {

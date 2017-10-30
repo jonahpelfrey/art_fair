@@ -34,7 +34,7 @@ var buyerSchema = new Schema({
 	},
 
 	phoneNumber: {
-		type: String,
+		type: Number,
 		required: true
 	},
 

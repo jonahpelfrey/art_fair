@@ -29,7 +29,7 @@ export class DataService {
 
 	constructor(private http: HttpClient) {}
 
-	addArtist(artist: Artist) {
+	addArtist(artist: any) {
 		this.http.post('/api/artists', artist).subscribe((res: any) => {
 			this.artistList.push(res.result);
 			this._artists.next(this.artistList);

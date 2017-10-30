@@ -30,9 +30,15 @@ function createArtist(){
 
 	var p = Q.defer();
 
-	var a = new Artist();
-	a.firstName = 'John';
-	a.lastName = 'Smith';
+	let a = new Artist({
+		firstName: "John",
+		lastName: "Artist",
+		phoneNumber: 6514143023,
+		email: "artist@gmail.com",
+		signature: "mySignature",
+		username: "Jim1",
+		password: "jimspassword"
+	});
 
 	a.save(function(err, artist){
 		if(err) p.reject(err);
@@ -46,9 +52,12 @@ function createVolunteer(){
 
 	var p = Q.defer();
 
-	var v = new Volunteer();
-	v.firstName = 'Jane';
-	v.lastName = 'Doe';
+	let v = new Volunteer({ 
+		firstName: "Jim",
+		lastName: "Volunteer",
+		username: "smithy",
+		password: "password"
+	});
 
 	v.save(function(err, volunteer){
 		if(err) p.reject(err);
@@ -62,15 +71,19 @@ function createBuyer(){
 
 	var p = Q.defer();
 
-	var b = new Buyer();
-	b.firstName = "David";
-	b.lastName = "Anderson";
-	b.address.street = "1500 W. Gorham St";
-	b.address.city = "Madison";
-	b.address.state = "WI";
-	b.address.zip = "53703";
-	b.phoneNumber = "800-212-2320";
-	b.email = "danderson@gmail.com";
+	let b = new Buyer({ 
+		firstName: "Steve",
+		lastName: "Buyer",
+		address: {
+			street: "Main St",
+			city: "Madison",
+			state: "WI",
+			zip: 53703
+		},
+		phoneNumber: 6513233033,
+		email: "jim@gmail.com",
+		member: false
+	});
 
 	b.save(function(err, buyer){
 		if(err) p.reject(err);
@@ -96,9 +109,6 @@ exports.generateModels = function(){
 
 	Q.all(promises).then(function(results){
 
-		// console.log("Buyer: " + results[0]._id);
-		// console.log("Artist: " + results[1]._id);
-		// console.log("Volunteer: " + results[2]._id);
 		var order = new Order();
 		order.buyer = results[0]._id;
 		order.artist = results[1]._id;

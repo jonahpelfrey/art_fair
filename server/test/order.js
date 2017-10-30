@@ -245,7 +245,7 @@ function buyerSeed(){
 			state: "WI",
 			zip: 53703
 		},
-		phoneNumber: "651-323-3033",
+		phoneNumber: 6513233033,
 		email: "jim@gmail.com",
 		member: false
 	});
