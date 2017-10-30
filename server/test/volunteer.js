@@ -33,6 +33,8 @@ describe('Volunteers', () => {
 
 			let volunteer = {
 				firstName: "Jim",
+				lastName: "Smith",
+				username: "smithy",
 			}
 			chai.request(app)
 				.post('/api/volunteers')
@@ -41,8 +43,8 @@ describe('Volunteers', () => {
 					res.should.have.status(400);
 					res.body.should.be.an('object');
 					res.body.should.have.property('errors');
-					res.body.errors.should.have.property('lastName');
-					res.body.errors.lastName.should.have.property('kind').eql('required');
+					res.body.errors.should.have.property('password');
+					res.body.errors.password.should.have.property('kind').eql('required');
 					done();
 				});
 		});
@@ -50,7 +52,9 @@ describe('Volunteers', () => {
 
 			let volunteer = {
 				firstName: "Jim",
-				lastName: "Smith"
+				lastName: "Smith",
+				username: "smithy",
+				password: "password"
 			}
 			chai.request(app)
 				.post('/api/volunteers')
@@ -71,6 +75,8 @@ describe('Volunteers', () => {
 			let volunteer = new Volunteer({ 
 				firstName: "Jim",
 				lastName: "Smith",
+				username: "smithy",
+				password: "password"
 			});
 			volunteer.save( (err, volunteer) => {
 				chai.request(app)
@@ -92,7 +98,9 @@ describe('Volunteers', () => {
 		it('should UPDATE a volunteer, given the id', (done) => {
 			let volunteer = new Volunteer({ 
 				firstName: "Jim",
-				lastName: "Smith"
+				lastName: "Smith",
+				username: "smithy",
+				password: "password"
 			});
 			volunteer.save( (err, volunteer) => {
 				chai.request(app)
@@ -114,6 +122,8 @@ describe('Volunteers', () => {
 			let volunteer = new Volunteer({ 
 				firstName: "Jim",
 				lastName: "Smith",
+				username: "smithy",
+				password: "password"
 			});
 			volunteer.save( (err, volunteer) => {
 				chai.request(app)

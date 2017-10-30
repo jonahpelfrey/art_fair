@@ -1,4 +1,4 @@
-'use strict';
+'use strict'; 
 
 /** 
  * =============================================================================
@@ -45,6 +45,8 @@ exports.createVolunteer = function(req, res) {
 	var v = new Volunteer();
 	v.firstName = req.body.firstName;
 	v.lastName = req.body.lastName;
+	v.username = req.body.username;
+	v.password = req.body.password;
 
 	v.save(function(err, result){
 		if(err) res.status(400).send(err);

@@ -264,9 +264,11 @@ function volunteerSeed(){
 
 	var p = Q.defer();
 
-	let volunteer = new Volunteer({
+	let volunteer = new Volunteer({ 
 		firstName: "Jim",
-		lastName: "Smith"
+		lastName: "Smith",
+		username: "smithy",
+		password: "password"
 	});
 
 	volunteer.save(function(err, result){
