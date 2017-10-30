@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { DataService } from './data.service';
 import { Observable } from "rxjs/Observable";
 import { HttpClient } from '@angular/common/http';
+
+import { ArtistFormComponent } from './artist-form/artist-form.component';
 import { Artist, Volunteer, Buyer, Order } from './models';
 
 @Component({
@@ -41,4 +44,3 @@ export class AppComponent {
     }
 
 }
-

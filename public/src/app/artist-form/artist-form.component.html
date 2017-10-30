@@ -1,0 +1,10 @@
+<form novalidate [formGroup]="artistForm">
+	<div class="form-group"
+		[ngClass]="{
+		'has-danger': firstName.invalid && (firstName.dirty || firstName.touched),
+		'has-success': firstName.valid && (firstName.dirty || firstName.touched)
+	}">
+		<label>First Name</label>
+		<input type="text" class="form-control" formControlName="firstName" required>
+	</div>
+</form>
