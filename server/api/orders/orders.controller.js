@@ -57,6 +57,36 @@ function getVolunteerForOrder(id) {
 	return p.promise;
 }
 
+function addOrderToBuyer(buyerId, orderId) {
+
+	var p = Q.defer();
+
+	Buyer.findOne({_id: buyerId})
+		.then(function(buyer){
+
+			buyer.orders.push(orderId);
+			buyer.save(function(err, result){
+				if(err) p.reject(err);
+				else { p.resolve(result); }
+			});
+
+		}, function(err){
+			p.reject(err);
+		});
+
+	return p.promise;
+}
+
+function removeOrderFromBuyer(id) {
+
+	//TODO
+}
+
+function generateRefKey() {
+
+	//TODO
+}
+
 /** 
  * =============================================================================
  * Public Functions
@@ -108,7 +138,12 @@ exports.createOrder = function(req, res) {
 		o.save(function(err, result){
 			if(err) res.status(400).send(err)
 			else {
-				res.json({message: "Order successfully added!", result});
+				var buyerPromise = addOrderToBuyer(result.buyer, result._id)
+					.then(function(buyer){
+						res.json({message: "Order successfully added!", result});
+					}, function(error){
+						res.status(400).send(err);
+					});
 			}
 		});
 	});

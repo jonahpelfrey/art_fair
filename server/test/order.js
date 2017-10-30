@@ -98,9 +98,9 @@ describe('Orders', () => {
 						res.body.should.be.an('object');
 						res.body.should.have.property('message').eql('Order successfully added!');
 						res.body.result.should.have.property('refKey');
-						res.body.result.should.have.property('artist');
-						res.body.result.should.have.property('volunteer');
-						res.body.result.should.have.property('buyer');
+						res.body.result.should.have.property('artist').eql(results[0]._id.toString());
+						res.body.result.should.have.property('volunteer').eql(results[1]._id.toString());
+						res.body.result.should.have.property('buyer').eql(results[2]._id.toString());
 						res.body.result.should.have.property('price');
 						done();
 					});
