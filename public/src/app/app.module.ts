@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ArtistFormComponent } from './artist-form/artist-form.component';
+import { ArtistTableComponent } from './artist-table/artist-table.component';
 
 import { DataService } from './data.service';
 import { ArtistInterceptor } from './artist.interceptor';
@@ -13,7 +14,8 @@ import { ArtistInterceptor } from './artist.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistFormComponent
+    ArtistFormComponent,
+    ArtistTableComponent
   ],
   imports: [
     BrowserModule,
