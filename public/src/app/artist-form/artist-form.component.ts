@@ -13,8 +13,6 @@ import { Artist, Volunteer, Buyer, Order } from '../models';
 
 export class ArtistFormComponent implements OnInit {
 
-  
-
   	artistForm: FormGroup;
     firstName: FormControl;
     lastName: FormControl;

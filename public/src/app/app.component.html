@@ -129,6 +129,7 @@
 						  <th>Last Name</th>
 						  <th>ID</th>
 						  <th>Remove</th>
+						  <th>Select</th>
 						</tr>
 					  </thead>
 					  <tbody>
@@ -137,6 +138,7 @@
 						  <td>{{artist.lastName}}</td>
 						  <td>{{artist._id}}</td>
 						  <td><button class="btn btn-danger" (click)="removeArtist(i, artist)">Remove</button></td>
+						  <td><button class="btn btn-success">Select</button>
 						</tr>
 					  </tbody>
 					</table> 
