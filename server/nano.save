@@ -1,0 +1,4212 @@
+    1 clear
+    2 vim ~/.zshrc
+    3 clear
+    4 ls
+    5 pwd
+    6 vim ~/.zshrc
+    7 clear
+    8 ls
+    9 echo $PATH
+   10 ls
+   11 cd Desktop
+   12 cd ..
+   13 ls
+   14 ls -a
+   15 clear
+   16 ls
+   17 mkdir work
+   18 mkdir git
+   19 ls
+   20 cd git
+   21 ls
+   22 vim ~/.zshrc
+   23 ls
+   24 vim ~/.zshrc
+   25 ls
+   26 ls -a
+   27 vim ~/.zshrc
+   28 ls
+   29 pwd
+   30 ls
+   31 vim ~/.zshrc
+   32 clear
+   33 ls
+   34 cd Desktop
+   35 ls
+   36 mkdir Home
+   37 cd Home
+   38 git clone https://github.com/jonahpelfrey/rideswap.git
+   39 clear
+   40 ls
+   41 cd ..
+   42 ls
+   43 cd RS
+   44 ls
+   45 rm -rf Server
+   46 mkdir server
+   47 cd server
+   48 npm
+   49 clear
+   50 ls
+   51 cd Desktop/RS
+   52 ls
+   53 cd server
+   54 npm init
+   55 clear
+   56 ls
+   57 clear
+   58 ls
+   59 touch server.js
+   60 touch service.js
+   61 pwd
+   62 ls
+   63 curl -O https://fastdl.mongodb.org/osx/mongodb-osx-x86_64-3.4.9.tgz
+   64 tar -zxvf mongodb-osx-x86_64-3.4.9.tgz
+   65 clear
+   66 ls
+   67 mkdir -p mongodb
+   68 cp -R -n mongodb-osx-x86_64-3.4.9/ mongodb
+   69 ls
+   70 vim ~/.zshrc
+   71 clear
+   72 ls
+   73 cd mongodb
+   74 ls
+   75 cd bin
+   76 ./mongod
+   77 clear
+   78 sudo chown -R `id -un` /data/db
+   79 mkdir -p /data/db
+   80 sudo mkdir -p /data/db
+   81 sudo chown -R `id -un` /data/db
+   82 clear
+   83 ./mongod
+   84 clear
+   85 ./mongod
+   86 ls
+   87 touch scraper.js
+   88 node
+   89 clear
+   90 ls
+   91 node scraper.js
+   92 npm install request cheerio q express mongoose morgan body-parser --save
+   93 clear
+   94 node scraper.js
+   95 clear
+   96 vim scraper.js
+   97 node scraper.js
+   98 clear
+   99 ls
+  100 touch backup.js
+  101 ls
+  102 node scraper.js
+  103 pwd
+  104 cd Desktop
+  105 ls
+  106 mkdir Genus
+  107 cd Genus
+  108 touch moc.cpp
+  109 cd Desktop/Genus
+  110 ls
+  111 git clone https://absjonah@bitbucket.org/absrd/mity_gpp.git
+  112 cd Desktop/Genus/mity_gpp
+  113 git branch -v -a
+  114 git checkout -b bug0016testing origin/bug0016
+  115 clear
+  116 ls
+  117 touch routes.js
+  118 ./mongod
+  119 node server.js
+  120 ./mongod
+  121 clear
+  122 ls
+  123 node server.js
+  124 clear
+  125 ls
+  126 mv routes.js
+  127 mv routes.js modelroute.js
+  128 ls
+  129 touch model.controller.js
+  130 mv model.route.js
+  131 mv modelroute.js model.route.js
+  132 clear
+  133 ls
+  134 node server.js
+  135 clear
+  136 ls
+  137 mkdir api
+  138 cd api
+  139 mkdir models
+  140 cd ..
+  141 ls
+  142 open .
+  143 node server.js
+  144 clear
+  145 ls
+  146 ls -a
+  147 clear
+  148 ./mongod
+  149 node server.js
+  150 clear
+  151 node server.js
+  152 clear
+  153 node server.js
+  154 clear
+  155 node server.js
+  156 clear
+  157 node server.js
+  158 clear
+  159 node server.js
+  160 ./mongod
+  161 node server.js
+  162 ./mongod
+  163 node server.js
+  164 clear
+  165 ls
+  166 touch config.js
+  167 clear
+  168 touch config.js
+  169 ls
+  170 rm config.js
+  171 clear
+  172 ./mongod
+  173 node server.js
+  174 clear
+  175 ls -a
+  176 cd ..
+  177 ls
+  178 ls -a
+  179 git init
+  180 cd RideSwap
+  181 ls
+  182 ls -a
+  183 rm -rf .git
+  184 cd ..
+  185 ls
+  186 clear
+  187 ls
+  188 ls -a
+  189 node server.js
+  190 ./mongod
+  191 cd server
+  192 ls
+  193 node server.js
+  194 ./mongod
+  195 clear
+  196 node server.js
+  197 clear
+  198 ls
+  199 mkdir models
+  200 node server.js
+  201 ./mongod
+  202 node server.js
+  203 clear
+  204 ls
+  205 clear
+  206 node scraper.js
+  207 clear
+  208 node scraper.js
+  209 cd ../..
+  210 ls
+  211 cd Genus
+  212 ls
+  213 clear
+  214 ls
+  215 mkdir testing
+  216 ls
+  217 mv main.cpp moc.cpp testing
+  218 ls
+  219 cd testing
+  220 ls
+  221 touch build
+  222 ls
+  223 chmod +x build
+  224 ls
+  225 ./build
+  226 clear
+  227 ls
+  228 ./build
+  229 clear
+  230 cd
+  231 clear
+  232 sudo npm install -g cordova ionic
+  233 clear
+  234 sudo npm install -g cordova ionic
+  235 clear
+  236 ls
+  237 cd Desktop
+  238 ls
+  239 mkdir Assets
+  240 ls
+  241 mv background.png rssketch.sketch Assets
+  242 ls
+  243 mkdir Work
+  244 ls
+  245 cd Work
+  246 ls
+  247 clear
+  248 ionic
+  249 ionic --version
+  250 ionic start uwlipids blank --type ion ic-angular
+  251 ionic start uwlipid blank --v2
+  252 ionic start --help
+  253 ionic start uwlipids blank --type ionic-angular
+  254 cd uwlipids
+  255 ls
+  256 ionic serve -l
+  257 clear
+  258 ls
+  259 cd
+  260 clear
+  261 ls
+  262 cd Desktop
+  263 ls
+  264 cd Genus
+  265 ls
+  266 cd testing
+  267 ls
+  268 git init
+  269 git commit -m "first commit"
+  270 git add .
+  271 git commit -m "first commit\n"
+  272 clear
+  273 git remote add origin https://github.com/jonahpelfrey/testing.git
+  274 git push origin master
+  275 git config --global user.name
+  276 git config --global user.name "jonahpelfrey"
+  277 git user.name
+  278 git --global user.name
+  279 clear
+  280 ls
+  281 clear
+  282 ls
+  283 cd ..
+  284 ls
+  285 cd ..
+  286 ls
+  287 cd Rs
+  288 ls
+  289 cd server
+  290 ls
+  291 node server.js
+  292 ./mongod
+  293 clear
+  294 node server.js
+  295 cd ../..
+  296 ls
+  297 cd Genus
+  298 ls
+  299 cd testing
+  300 git status
+  301 git add moc.cpp
+  302 git commit -m "added socket server intialization and client socket initialization"
+  303 git push origin master
+  304 clear
+  305 ls
+  306 ls -a
+  307 git add moc.cpp
+  308 git commit -m "refactor client socket thread"
+  309 git push origin master
+  310 clear
+  311 ls
+  312 git add moc.cpp
+  313 git commit -m "fixed includes"
+  314 git push origin master
+  315 git add moc.cpp
+  316 git commit -m "main method"
+  317 git push origin master
+  318 git status
+  319 git diff
+  320 clear
+  321 git stash
+  322 git fetch
+  323 git pull
+  324 git pull origin master
+  325 git add moc.cpp
+  326 git commit -m "cleanup"
+  327 git push origin master
+  328 git fetch
+  329 git pull origin master
+  330 clear
+  331 git add moc.cpp
+  332 git commit -m "changes"
+  333 git push origin master
+  334 git stash
+  335 git fetch
+  336 git pull origin master
+  337 clear
+  338 git add .
+  339 git commit -m "client process"
+  340 git push origin master
+  341 git add moc.cpp
+  342 git commit -m "usleep"
+  343 git push origin master
+  344 clear
+  345 git add moc.cpp
+  346 git commit -m "refactor"
+  347 git push origin master
+  348 git add moc.cpp
+  349 git commit -m "n"
+  350 git push origin master
+  351 git add moc.cpp
+  352 clear
+  353 git commit -m "runtime bools"
+  354 git push origin master
+  355 git add .
+  356 git commit -m "main sleep"
+  357 git push origin master
+  358 clear
+  359 git status
+  360 git add moc.cpp
+  361 git commit -m "more updates"
+  362 git push origin master
+  363 clear
+  364 git status
+  365 clear
+  366 ls
+  367 ./build
+  368 clear
+  369 git add moc.cpp
+  370 git commit -m "var fixes"
+  371 git push origin master
+  372 git add moc.cpp
+  373 git commit -m "open client socket function"
+  374 git push origin master
+  375 git add .
+  376 ls
+  377 rm moc
+  378 git add .
+  379 git commit -m "cleanup"
+  380 git push origin master
+  381 git config --global user.name "jonahpelfrey"
+  382 git config --blobal user.email "jsp916@gmail.com"
+  383 clear
+  384 git config --global user.email "jsp916@gmail.com"
+  385 clear
+  386 ls
+  387 ls -a
+  388 ls -l
+  389 git add .
+  390 git commit -m "validate buffer start"
+  391 git push origin master
+  392 git add .
+  393 git commit -m "validate"
+  394 git push origin master
+  395 git status
+  396 git add .
+  397 git commit -m "array size"
+  398 git push origin master
+  399 git add .
+  400 git commit -m "msg"
+  401 git push origin master
+  402 git add .
+  403 git commit -m "cleanup"
+  404 git push origin master
+  405 git add .
+  406 git commit -m "cleanup"
+  407 git push origin master
+  408 clear
+  409 git add .
+  410 git commit -m "server buf index"
+  411 git push origin master
+  412 clear
+  413 git add .
+  414 git commit -m "reads/writes output"
+  415 git push origin master
+  416 git add .
+  417 git commit -m "usleep"
+  418 git push origin master
+  419 git add .
+  420 git commit -m "buffer"
+  421 git push origin master
+  422 git pull origin master
+  423 git add .
+  424 git commit -m "usleep"
+  425 git push origin master
+  426 clear
+  427 git add .
+  428 git commit -m "cleanup"
+  429 git push origin master
+  430 git pull origin master
+  431 vim ~/.zshrc
+  432 cd Desktop/Genus
+  433 ls
+  434 cd testing
+  435 ls
+  436 ga
+  437 gp
+  438 clear
+  439 git pull origin master
+  440 ga
+  441 gc "formatting"
+  442 gp
+  443 ga
+  444 gc "added third thread"
+  445 gp
+  446 ga
+  447 gc "n"
+  448 gp
+  449 ga
+  450 gc "write increment"
+  451 gp
+  452 ga
+  453 gc "print"
+  454 gp
+  455 git pull origin master
+  456 clear
+  457 ga
+  458 gc "validate"
+  459 gp
+  460 git pull origin master
+  461 clear
+  462 ga
+  463 gc "cleanup"
+  464 gp
+  465 cd
+  466 clear
+  467 ls
+  468 cd Desktop
+  469 ls
+  470 cd Work
+  471 ls
+  472 history | grep ionic
+  473 ionic start itsgood blank --type ionic-angular
+  474 cd itsgood
+  475 ionic serve -l
+  476 npm install angular2-text-mask --save
+  477 ionic serve -l
+  478 clear
+  479 ls
+  480 npm install
+  481 ionic serve -l
+  482 clear
+  483 cd
+  484 clear
+  485 ls
+  486 cd Desktop
+  487 ls
+  488 cd ItsGood
+  489 ls
+  490 pod init
+  491 sudo gem install cocoapods
+  492 clear
+  493 ls
+  494 pod init
+  495 ls
+  496 vim Podfile
+  497 pod install
+  498 ls
+  499 open ItsGood.xcworkspace
+  500 clear
+  501 cd ..
+  502 ls
+  503 rm -rf ItsGood
+  504 clear
+  505 ls
+  506 cd Genus
+  507 ls
+  508 cd tetsing
+  509 ls
+  510 cd testing
+  511 ls
+  512 git fetch
+  513 git status
+  514 git pull
+  515 git pull origin master
+  516 clear
+  517 ga
+  518 gc "cleanup and labelling"
+  519 gp
+  520 clear
+  521 ls
+  522 clear
+  523 ls
+  524 rm mongodb-osx-x86_64-3.4.9.tgz
+  525 clear
+  526 ls
+  527 cd Desktop/Genus
+  528 ls
+  529 cd mity_gpp
+  530 ls
+  531 cd ..
+  532 ls
+  533 cd testing
+  534 ls
+  535 touch threadqueue.cpp
+  536 clear
+  537 ga
+  538 gc "template queue class"
+  539 gp
+  540 cd Desktop
+  541 ls
+  542 cd Work
+  543 ls
+  544 cd tracker
+  545 ls
+  546 git add .,
+  547 git add .
+  548 git commit -m "first commit"
+  549 clear
+  550 ga
+  551 gc "animations and constraints"
+  552 cd Desktop
+  553 ls
+  554 cd Work/tracker
+  555 clear
+  556 ls
+  557 ga
+  558 cd
+  559 cd Desktop/Work/tracker
+  560 gc "modal changes"
+  561 clear
+  562 cd Desktop/Work/tracker
+  563 ga
+  564 gc "added fat and sugar fields and inputs"
+  565 cd Desktop/Work/tracker
+  566 git remote add origin https://github.com/jonahpelfrey/nutritionTracker.git
+  567 git push -u origin master
+  568 ls
+  569 cd Desktop
+  570 ls
+  571 cd Genus
+  572 ls
+  573 cd testing
+  574 ls
+  575 touch delaytest.cpp
+  576 ga
+  577 gc "time testing"
+  578 gp
+  579 clear
+  580 ga
+  581 gc "ms conversion"
+  582 gp
+  583 ga
+  584 gc "added open connection to delay-test"
+  585 gp
+  586 clear
+  587 pwd
+  588 ls
+  589 cd Desktop/Work
+  590 ls
+  591 touch webscrape.js
+  592 touch server.js
+  593 cd Desktop/Work
+  594 ls
+  595 mkdir samples
+  596 mv webscrape.js samples
+  597 mv server.js samples
+  598 cd Desktop/Work/samples
+  599 ls
+  600 vim server.js
+  601 ls
+  602 open .
+  603 cd ..
+  604 open .
+  605 ls
+  606 cd samples
+  607 ls
+  608 clear
+  609 git init
+  610 git add .
+  611 git commit -m "first commit"
+  612 git remote add origin https://github.com/jonahpelfrey/code_samples.git
+  613 git push -u origin master
+  614 clear
+  615 ls
+  616 touch queue.h
+  617 ls
+  618 touch dataservice.cpp
+  619 clear
+  620 ga
+  621 gc "added dataservice and queue"
+  622 gp
+  623 ls
+  624 cd Desktop/Genus
+  625 ls
+  626 cd testing
+  627 ls
+  628 touch retry.cpp
+  629 cd Desktop/Genus
+  630 ls
+  631 cd testing
+  632 ga
+  633 gc "added retry test file"
+  634 gp
+  635 ga
+  636 gc "updates"
+  637 gp
+  638 clear
+  639 ls
+  640 ga
+  641 gc "first three tests done"
+  642 gp
+  643 git log
+  644 ga
+  645 gc "tests 4 and 5"
+  646 gp
+  647 clear
+  648 ga
+  649 gc "finished writing tests for main loop"
+  650 gp
+  651 git pull
+  652 git pull origin master
+  653 ga
+  654 gc "cleanup"
+  655 gp
+  656 ga
+  657 gc "more cleanup:\n"
+  658 gp
+  659 ga
+  660 gc "changed test 5"
+  661 gp
+  662 clear
+  663 cd ../..
+  664 ls
+  665 cd Work
+  666 ls
+  667 git clone https://github.com/jonahpelfrey/art_fair.git
+  668 ls
+  669 cd art_fair
+  670 ls
+  671 mkdir server
+  672 mkdir client
+  673 cd server
+  674 ls
+  675 mkdir routes
+  676 mkdir models
+  677 touch server.js
+  678 cd ..
+  679 ls
+  680 cd client
+  681 mkdir mobile
+  682 mkdir web
+  683 cd ..
+  684 ls
+  685 npm init
+  686 clear
+  687 ls
+  688 cd server
+  689 ls
+  690 npm init
+  691 clear
+  692 ls
+  693 cd ..
+  694 ls
+  695 ga
+  696 gc "first commit"
+  697 gp
+  698 cd ..
+  699 ls
+  700 cd tracker
+  701 ga
+  702 gc "update values based on view input"
+  703 gp
+  704 ga
+  705 gc "populate labels"
+  706 gp
+  707 ga
+  708 gc "refactor field updating"
+  709 gp
+  710 ga
+  711 gc "added user defaults, nutrient class, member funcs, refactored view controller, deleted old data structures"
+  712 gp
+  713 ga
+  714 gc "reset user default option"
+  715 gp
+  716 ga
+  717 gc "changed icon"
+  718 gp
+  719 ga
+  720 gc "added menu view"
+  721 gp
+  722 ga
+  723 gc "changed property on width constraints for nutrient labels"
+  724 gp
+  725 ls
+  726 cd Desktop/Genus
+  727 ls
+  728 cd mity_gpp
+  729 git branch
+  730 git branch -v -a
+  731 clear
+  732 ls
+  733 git add arm_main.cpp
+  734 git commit -m "Removed the queueing of messages from the cmdSocketSend function. Left the other methods for interacting with the queue in place, just removed the necessary parts so that cmdSocketSend can function without storing failed messages. Added in a 
+boolean value in place of the timer class since the timer class was used exclusively for the queue."
+  735 git branch -v -a
+  736 git push origin bug0016
+  737 git push origin/bug0016
+  738 git push origin bug0016
+  739 git log
+  740 git branch
+  741 git branch -v -a
+  742 git remote -v
+  743 git push origin bug0016
+  744 git fetch
+  745 git push origin bug0016
+  746 git fetch origin
+  747 git push origin bug0016
+  748 git push -u origin bug0016
+  749 clear
+  750 ls
+  751 cd ..
+  752 ls
+  753 rm -rf mity_gpp
+  754 cd Desktop/Genus
+  755 ls
+  756 git clone https://absjonah@bitbucket.org/absrd/mity_gpp.git
+  757 ls
+  758 cd mity_gpp
+  759 git branch -v -a
+  760 git checkout -b sockettesting origin/bug0016
+  761 git add arm_main.cpp
+  762 git commit -m "Removed queueing from command socket send. Added boolean values to replace the timer that was being used exclusively for the queue. Left the other queue functions intact in case we go back to it."
+  763 git push origin/bug0016
+  764 git push origin bug0016
+  765 git push origin origin/bug0016
+  766 git push origin bug0016
+  767 clear
+  768 ls
+  769 cd ..
+  770 ls
+  771 rm -rf mity_gpp
+  772 git clone https://absjonah@bitbucket.org/absrd/mity_gpp.git
+  773 cd mity_gpp
+  774 git branch -v -a
+  775 git branch -a
+  776 git branch origin/bug0016
+  777 git branch
+  778 git checkout -b origin/bug0016
+  779 git checkout origin/bug0016
+  780 cd ..
+  781 ls
+  782 rm -rf mity_gpp
+  783 clear
+  784 git clone https://absjonah@bitbucket.org/absrd/mity_gpp.git
+  785 cd mity_gpp
+  786 ls
+  787 clear
+  788 git checkout bug0016
+  789 git branch -a
+  790 git diff
+  791 git status
+  792 git add .
+  793 git status
+  794 git commit -m "Removed queueing from cmdSocketSend. Left the other queueing functions in place in case we rever to queueing dropped socket messages in the future"
+  795 git push origin bug0016
+  796 clear
+  797 ls
+  798 git branch
+  799 cd ..
+  800 ls
+  801 cd ..
+  802 ls
+  803 cd wor
+  804 cd Work
+  805 ls
+  806 cd tracker
+  807 ls
+  808 ga
+  809 gc "added logviewcontroller, logviewcell"
+  810 gp
+  811 ls
+  812 cd Desktop/Genus
+  813 ls
+  814 clear
+  815 ls
+  816 ga
+  817 gc "update to logviewcell"
+  818 gp
+  819 cd ..
+  820 ls
+  821 cd art_fair
+  822 ls
+  823 clear
+  824 cd server
+  825 ls
+  826 npm install express morgan mongoose body-parser --save
+  827 clear
+  828 npm install -g angular-cli@latest
+  829 clear
+  830 ls
+  831 ga
+  832 gc "basic server template"
+  833 clear
+  834 gp
+  835 nove -v
+  836 node -v
+  837 clear
+  838 ng -v
+  839 clear
+  840 cd ..
+  841 ls
+  842 cd client
+  843 ls
+  844 rm -rf mobile
+  845 rm -rf web
+  846 ls
+  847 clear
+  848 ng new artfair
+  849 clear
+  850 lks
+  851 ls
+  852 cd artfair
+  853 ls
+  854 npm start
+  855 cd Desktop/Work/art_fair
+  856 ls
+  857 cd server
+  858 ls
+  859 cd models
+  860 ls
+  861 touch order.js
+  862 touch artist.js
+  863 touch volunteer.js
+  864 cd ..
+  865 ls
+  866 cd ..
+  867 ls
+  868 cd server
+  869 ls
+  870 cd mongodb
+  871 ls
+  872 cd bin
+  873 ls
+  874 clear
+  875 ls
+  876 node server.js
+  877 ./mongod
+  878 node server.js
+  879 clear
+  880 ls
+  881 mkdir api
+  882 ls
+  883 cd api
+  884 mkdir artist
+  885 mkdir volunteer
+  886 mkdir orders
+  887 ls
+  888 rm -rf artist
+  889 rm -rf volunteer
+  890 mkdir volunteers
+  891 mkdir artists
+  892 clear
+  893 ls
+  894 cd artists
+  895 ls
+  896 touch route.js
+  897 touch artist.controller.js
+  898 cd ..
+  899 ls
+  900 cd volunteers
+  901 ls
+  902 touch route.js
+  903 touch volunteer.controller.js
+  904 cd ..
+  905 ls
+  906 cd orders
+  907 ls
+  908 touch route.js
+  909 touch orders.controller.js
+  910 cd ..
+  911 ls
+  912 clear
+  913 ls
+  914 cd ..
+  915 ls
+  916 cd ..
+  917 ls
+  918 ga
+  919 gc "client template, basic routing, schemas, server"
+  920 clear
+  921 gp
+  922 ./mongod
+  923 ls
+  924 cd server/q
+  925 ls
+  926 cd server
+  927 ls
+  928 node server.js
+  929 ./mongod
+  930 node server.js
+  931 clear
+  932 ls
+  933 touch seed.js
+  934 ./mongod
+  935 node server.js
+  936 clear
+  937 ls
+  938 ./mongod
+  939 node server.js
+  940 ls
+  941 cd mongodb
+  942 ls
+  943 cd bin
+  944 ls
+  945 clear
+  946 ./mongo
+  947 clear
+  948 ./mongo
+  949 clear
+  950 ./mongod
+  951 node server.js
+  952 ./mongo
+  953 ./mongod
+  954 ./mongo
+  955 node server.js
+  956 clear
+  957 ./mongod
+  958 node server.js
+  959 ./mongo
+  960 clear
+  961 ./mongod
+  962 clear
+  963 ./mongo
+  964 node server.js
+  965 clear
+  966 ./mongod
+  967 node server.js
+  968 clear
+  969 node server.js
+  970 clear
+  971 ./mongo
+  972 ./mongod
+  973 node server.js
+  974 clear
+  975 ./mongod
+  976 node server.js
+  977 clear
+  978 node server.js
+  979 ./mongo
+  980 clear
+  981 clear
+  982 ./mongod
+  983 ./mongo
+  984 node server.js
+  985 clear
+  986 ./mongod
+  987 node server.js
+  988 clear
+  989 node server.js
+  990 clear
+  991 node server.js
+  992 clear
+  993 node server.js
+  994 clear
+  995 node server.js
+  996 clear
+  997 node server.js
+  998 clear
+  999 node server.js
+ 1000 clear
+ 1001 npm install q --save
+ 1002 clear
+ 1003 node server.js
+ 1004 clear
+ 1005 node server.js
+ 1006 clear
+ 1007 node server.js
+ 1008 clear
+ 1009 node server.js
+ 1010 clear
+ 1011 node server.js
+ 1012 clear
+ 1013 node server.js
+ 1014 clear
+ 1015 node server.js
+ 1016 clerar
+ 1017 clera
+ 1018 clear
+ 1019 node server.js
+ 1020 clear
+ 1021 ls
+ 1022 node server.js
+ 1023 clear
+ 1024 node server.js
+ 1025 clear
+ 1026 node server.js
+ 1027 clear
+ 1028 node server.js
+ 1029 clear
+ 1030 node server.js
+ 1031 clear
+ 1032 node server.js
+ 1033 clear
+ 1034 node server.js
+ 1035 clear
+ 1036 node server.js
+ 1037 clear
+ 1038 node server.js
+ 1039 clear
+ 1040 node server.js
+ 1041 clear
+ 1042 node server.js
+ 1043 clear
+ 1044 node server.js
+ 1045 clear
+ 1046 node server.js
+ 1047 clear
+ 1048 node server.js
+ 1049 clear
+ 1050 node server.js
+ 1051 clear
+ 1052 ./mongo
+ 1053 clear
+ 1054 node server.js
+ 1055 clear
+ 1056 node server.js
+ 1057 clear
+ 1058 node server.js
+ 1059 clear
+ 1060 node server.js
+ 1061 clear
+ 1062 node server.js
+ 1063 clear
+ 1064 node server.js
+ 1065 clear
+ 1066 node server.js
+ 1067 clear
+ 1068 node serq
+ 1069 node server.js
+ 1070 clear
+ 1071 node server.js q
+ 1072 clear
+ 1073 node server.js
+ 1074 clear
+ 1075 node server.js q
+ 1076 ./mongo
+ 1077 clear
+ 1078 node server.js
+ 1079 clear
+ 1080 node server.js
+ 1081 clear
+ 1082 node server.js
+ 1083 cd ..
+ 1084 ls
+ 1085 ga
+ 1086 gc "subdocument saving and promises"
+ 1087 gp
+ 1088 clear
+ 1089 node server
+ 1090 clear
+ 1091 ./mongo
+ 1092 clear
+ 1093 ls
+ 1094 cd server
+ 1095 ls
+ 1096 clear
+ 1097 node server.js
+ 1098 clear
+ 1099 node server.js
+ 1100 clear
+ 1101 node server.js
+ 1102 clear
+ 1103 node server.js
+ 1104 clear
+ 1105 node server.js
+ 1106 clear
+ 1107 node server.js
+ 1108 clear
+ 1109 node server.js
+ 1110 clear
+ 1111 node server.js
+ 1112 clear
+ 1113 node server.js
+ 1114 clear
+ 1115 node server.js
+ 1116 clear
+ 1117 node server.js
+ 1118 clear
+ 1119 node server.js
+ 1120 clear
+ 1121 node server.js
+ 1122 clear
+ 1123 node server.js
+ 1124 clear
+ 1125 node server.js
+ 1126 clear
+ 1127 node server.js
+ 1128 clear
+ 1129 node server.js
+ 1130 clear
+ 1131 cd ..
+ 1132 ls
+ 1133 ga
+ 1134 gc "added controller functions"
+ 1135 gp
+ 1136 clear
+ 1137 cd server
+ 1138 ls
+ 1139 ./mongo
+ 1140 ./mongod
+ 1141 clear
+ 1142 ./mongo
+ 1143 cd ..
+ 1144 ls
+ 1145 ga
+ 1146 gc "more helper functions for schemas"
+ 1147 gp
+ 1148 clear
+ 1149 ls
+ 1150 cd server
+ 1151 ls
+ 1152 cd api
+ 1153 ls
+ 1154 touch interface.js
+ 1155 clear
+ 1156 cd ..
+ 1157 ls
+ 1158 cd models
+ 1159 ls
+ 1160 touch buyer.js
+ 1161 ls
+ 1162 cd ..
+ 1163 ls
+ 1164 cd api
+ 1165 ls
+ 1166 rm interface.js
+ 1167 cd ..
+ 1168 ls
+ 1169 clear
+ 1170 ls
+ 1171 cd api
+ 1172 ls
+ 1173 mkdir buyers
+ 1174 cd buyers
+ 1175 touch route.js
+ 1176 touch buyer.controller.js
+ 1177 cd ../..
+ 1178 ls
+ 1179 clear
+ 1180 ls
+ 1181 ./mongod
+ 1182 clear
+ 1183 node server.js
+ 1184 clear
+ 1185 node server.js
+ 1186 clear
+ 1187 node server.js
+ 1188 ./mongo
+ 1189 clear
+ 1190 ls
+ 1191 cd ..
+ 1192 ls
+ 1193 ga
+ 1194 gc "fixed routing, added buyer schema and methods, cleaned up seed class"
+ 1195 gp
+ 1196 clear
+ 1197 ls
+ 1198 cd server
+ 1199 ls
+ 1200 cd api
+ 1201 ls
+ 1202 mkdir auth
+ 1203 cd auth
+ 1204 touch auth.js
+ 1205 ls
+ 1206 touch route.js
+ 1207 clear
+ 1208 ls
+ 1209 cd ..
+ 1210 ls
+ 1211 cd ..
+ 1212 ls
+ 1213 clear
+ 1214 ls
+ 1215 npm install jwt-simple --save
+ 1216 clear
+ 1217 ls
+ 1218 npm install jsonwebtoken bcryptjs --save
+ 1219 clear
+ 1220 ls
+ 1221 cd api
+ 1222 ls
+ 1223 cd auth
+ 1224 ls
+ 1225 touch config.js
+ 1226 cd ..
+ 1227 clear
+ 1228 ls
+ 1229 cd models
+ 1230 ls
+ 1231 touch admin.js
+ 1232 cd ..
+ 1233 ls
+ 1234 clear
+ 1235 ls
+ 1236 cd api
+ 1237 ls
+ 1238 cd auth
+ 1239 ls
+ 1240 touch verify.js
+ 1241 cd ../..
+ 1242 clear
+ 1243 ls
+ 1244 ga
+ 1245 gc "added auth"
+ 1246 clear
+ 1247 gp
+ 1248 clear
+ 1249 ls
+ 1250 git status
+ 1251 git log
+ 1252 clear
+ 1253 ls
+ 1254 cd ..
+ 1255 ls
+ 1256 cd client
+ 1257 ls
+ 1258 cd artfair
+ 1259 ls
+ 1260 npm start
+ 1261 clear
+ 1262 cd ..
+ 1263 ls
+ 1264 cd ..
+ 1265 ls
+ 1266 ga
+ 1267 gc "bootstrap theme: paper"
+ 1268 gp
+ 1269 clear
+ 1270 cd client
+ 1271 ls
+ 1272 cd artfair
+ 1273 ls
+ 1274 npm start
+ 1275 clear
+ 1276 ls
+ 1277 cd ..
+ 1278 ls
+ 1279 cd ..
+ 1280 ls
+ 1281 ga
+ 1282 gc "added some basic UI components to app.component"
+ 1283 gp
+ 1284 pwd
+ 1285 ls
+ 1286 curl -O https://fastdl.mongodb.org/osx-ssl/mongodb-osx-ssl-x86_64-3.4.9.tgz
+ 1287 ls
+ 1288 tar -zxvf mongodb-osx-ssl-x86_64-3.4.9.tgz
+ 1289 history | grep mongodb-osx
+ 1290 history
+ 1291 history > history.txt
+ 1292 ls
+ 1293 open .
+ 1294 clear
+ 1295 ls
+ 1296 open .
+ 1297 clear
+ 1298 ls
+ 1299 rm mongodb-osx-x86_64-3.4.9.tgz
+ 1300 ls
+ 1301 cd /data
+ 1302 ls
+ 1303 clear
+ 1304 ls
+ 1305 ga
+ 1306 gc "fixed colon"
+ 1307 gp
+ 1308 cd /data/db
+ 1309 clear
+ 1310 ls
+ 1311 cd client
+ 1312 ls
+ 1313 cd artfair
+ 1314 ls
+ 1315 npm start
+ 1316 clear
+ 1317 ls
+ 1318 cd ..
+ 1319 ls
+ 1320 cd ..
+ 1321 ls
+ 1322 clear
+ 1323 cd client
+ 1324 ls
+ 1325 cd artfair
+ 1326 ls
+ 1327 npm start
+ 1328 clear
+ 1329 ls
+ 1330 clear
+ 1331 cd ..
+ 1332 ;s
+ 1333 ls
+ 1334 cd ..
+ 1335 ls
+ 1336 clear
+ 1337 ls
+ 1338 cd client
+ 1339 ls
+ 1340 cd artfair
+ 1341 npm start
+ 1342 clear
+ 1343 ls
+ 1344 clear
+ 1345 ls
+ 1346 cd mongodb
+ 1347 ls
+ 1348 cd bin
+ 1349 ls
+ 1350 clear
+ 1351 ls
+ 1352 cd ../..
+ 1353 ls
+ 1354 cd server
+ 1355 ls
+ 1356 npm install express-session --save
+ 1357 npm install cookie-parser connect-memcached --save
+ 1358 clear
+ 1359 ls
+ 1360 node server.js
+ 1361 ./mongod
+ 1362 clear
+ 1363 node server.js
+ 1364 clear
+ 1365 node server.js
+ 1366 clear
+ 1367 node server.js
+ 1368 clear
+ 1369 node server.js
+ 1370 clear
+ 1371 node server.js
+ 1372 clear
+ 1373 node server.js
+ 1374 clear
+ 1375 node server.js
+ 1376 clear
+ 1377 npm install cookie-session
+ 1378 clear
+ 1379 node server.js
+ 1380 clear
+ 1381 node server.js
+ 1382 clear
+ 1383 npm install session-file-store --save
+ 1384 clear
+ 1385 node server.js
+ 1386 clear
+ 1387 node server.js
+ 1388 clear
+ 1389 ls
+ 1390 ls -a
+ 1391 clear
+ 1392 node server.js
+ 1393 clear
+ 1394 node server.js
+ 1395 clear
+ 1396 node server.js
+ 1397 clear
+ 1398 npm install connect-mongo --save
+ 1399 clear
+ 1400 node server.js
+ 1401 clear
+ 1402 node server.js
+ 1403 clear
+ 1404 node server.js
+ 1405 clear
+ 1406 ls
+ 1407 touch config.js
+ 1408 clear
+ 1409 node server.js
+ 1410 clear
+ 1411 npm install dotenv --save
+ 1412 node server.js
+ 1413 clear
+ 1414 ls
+ 1415 touch .env
+ 1416 ls -l
+ 1417 ls -a
+ 1418 clear
+ 1419 ls -a
+ 1420 touch .gitignore
+ 1421 clear
+ 1422 node server.js
+ 1423 clear
+ 1424 node server.js
+ 1425 clear
+ 1426 ls
+ 1427 clear
+ 1428 node server.js
+ 1429 clear
+ 1430 node server.js
+ 1431 clear
+ 1432 node server.js
+ 1433 clear
+ 1434 node server.js
+ 1435 clear
+ 1436 node server.js
+ 1437 clear
+ 1438 node server.js
+ 1439 clear
+ 1440 ls
+ 1441 clear
+ 1442 node server.js
+ 1443 clear
+ 1444 node server.js
+ 1445 clear
+ 1446 node server.js
+ 1447 clear
+ 1448 node server.js
+ 1449 clear
+ 1450 node server.js
+ 1451 clear
+ 1452 node server.js
+ 1453 clear
+ 1454 node server.js
+ 1455 clear
+ 1456 node server.js
+ 1457 clear
+ 1458 node server.js
+ 1459 clear
+ 1460 node server.js
+ 1461 clear
+ 1462 node server.js
+ 1463 clear
+ 1464 node server.js
+ 1465 clear
+ 1466 node server.js
+ 1467 clear
+ 1468 node server.js
+ 1469 clear
+ 1470 node server.js
+ 1471 clear
+ 1472 node server.js
+ 1473 clear
+ 1474 node server.js
+ 1475 clear
+ 1476 node server.js
+ 1477 clear
+ 1478 node server.js
+ 1479 clear
+ 1480 node server.js
+ 1481 clear
+ 1482 node server.js
+ 1483 clear
+ 1484 ls
+ 1485 cd api
+ 1486 ls
+ 1487 cd ..
+ 1488 ls
+ 1489 clear
+ 1490 node server.js
+ 1491 clear
+ 1492 node server.js
+ 1493 clear
+ 1494 node server.js
+ 1495 clear
+ 1496 node server.js
+ 1497 clear
+ 1498 ./mongod
+ 1499 clear
+ 1500 node server.js
+ 1501 clear
+ 1502 node server.js
+ 1503 clear
+ 1504 node server.js
+ 1505 clear
+ 1506 node server.js
+ 1507 clear
+ 1508 node server.js
+ 1509 clear
+ 1510 node server.js
+ 1511 clear
+ 1512 node server.js
+ 1513 ./mongod
+ 1514 clear
+ 1515 ls
+ 1516 node server.js
+ 1517 clear
+ 1518 ls
+ 1519 node server.js
+ 1520 clear
+ 1521 node server.js
+ 1522 clear
+ 1523 node server.js
+ 1524 clear
+ 1525 node server.js
+ 1526 clear
+ 1527 ls
+ 1528 cd ..
+ 1529 ls
+ 1530 ga
+ 1531 gc "session, cookies, routing"
+ 1532 clear
+ 1533 gp
+ 1534 clear
+ 1535 ./mongod
+ 1536 cd server
+ 1537 ls
+ 1538 clear
+ 1539 node server.js
+ 1540 clear
+ 1541 node server.js
+ 1542 clear
+ 1543 node server.js
+ 1544 clear
+ 1545 node server.js
+ 1546 clear
+ 1547 node server.js
+ 1548 clear
+ 1549 node server.js
+ 1550 clear
+ 1551 node server.js
+ 1552 clear
+ 1553 node server.js
+ 1554 ./mongo
+ 1555 clear
+ 1556 node server.js
+ 1557 clear
+ 1558 node server.js
+ 1559 clear
+ 1560 node server.js
+ 1561 clear
+ 1562 node server.js
+ 1563 clear
+ 1564 node server.js
+ 1565 clear
+ 1566 node server.js
+ 1567 clear
+ 1568 node server.js
+ 1569 clear
+ 1570 node server.js
+ 1571 clear
+ 1572 node server.js
+ 1573 clear
+ 1574 node server.js
+ 1575 clear
+ 1576 node server.js
+ 1577 clear
+ 1578 node server.js
+ 1579 clear
+ 1580 node server.js
+ 1581 clear
+ 1582 node server.js
+ 1583 clear
+ 1584 node server.js
+ 1585 clear
+ 1586 node server.js
+ 1587 clear
+ 1588 node server.js
+ 1589 clear
+ 1590 node server.js
+ 1591 clear
+ 1592 node server.js
+ 1593 clear
+ 1594 node server.js
+ 1595 clear
+ 1596 node server.js
+ 1597 clear
+ 1598 node server.js
+ 1599 clear
+ 1600 node server.js
+ 1601 clear
+ 1602 node server.js
+ 1603 clear
+ 1604 node server.js
+ 1605 clear
+ 1606 node server.js
+ 1607 cldear
+ 1608 clear
+ 1609 node server.js
+ 1610 clear
+ 1611 node server.js
+ 1612 clear
+ 1613 node server.js
+ 1614 ./mongo
+ 1615 node server.js
+ 1616 clear
+ 1617 node server.js
+ 1618 clear
+ 1619 node server.js
+ 1620 clear
+ 1621 node server.js
+ 1622 clear
+ 1623 node server.js
+ 1624 clear
+ 1625 ls
+ 1626 clear
+ 1627 node server.js
+ 1628 clear
+ 1629 node server.js
+ 1630 clear
+ 1631 node server.js
+ 1632 clear
+ 1633 node server.js
+ 1634 clear
+ 1635 node server.js
+ 1636 clear
+ 1637 cd ..
+ 1638 ls
+ 1639 ga
+ 1640 gc "really wish express middleware wasn't pushed onto a stack. holy moly"
+ 1641 gp
+ 1642 ls
+ 1643 cd server
+ 1644 clear
+ 1645 ls
+ 1646 cd api
+ 1647 ls
+ 1648 mkdir general
+ 1649 cd general
+ 1650 touch route.js
+ 1651 touch controller.js
+ 1652 cd ..
+ 1653 ls
+ 1654 cd artists
+ 1655 ls
+ 1656 cd ..
+ 1657 ls
+ 1658 cd general
+ 1659 ls
+ 1660 cd ..
+ 1661 clear
+ 1662 ls
+ 1663 clear
+ 1664 ./mongod
+ 1665 node server.js
+ 1666 clear
+ 1667 node server.js
+ 1668 clear
+ 1669 node server.js
+ 1670 clear
+ 1671 node server.js
+ 1672 clear
+ 1673 node server.js
+ 1674 clear
+ 1675 node server.js
+ 1676 clear
+ 1677 node server.js
+ 1678 clear
+ 1679 node server.js
+ 1680 clear
+ 1681 node server.js
+ 1682 clear
+ 1683 node server.js
+ 1684 clear
+ 1685 node server.js
+ 1686 clear
+ 1687 node server.js
+ 1688 clear
+ 1689 node server.js
+ 1690 clear
+ 1691 node server.js
+ 1692 clear
+ 1693 node server.js
+ 1694 clear
+ 1695 node server.js
+ 1696 clear
+ 1697 node server.js
+ 1698 clear
+ 1699 node server.js
+ 1700 ./mongod
+ 1701 clear
+ 1702 ls
+ 1703 node server.js
+ 1704 clear
+ 1705 node server.js
+ 1706 clear
+ 1707 node server.js
+ 1708 cd ..
+ 1709 ls
+ 1710 ga
+ 1711 gc "issue with connect-mongo | switched to memorystore for dev environment"
+ 1712 gp
+ 1713 clear
+ 1714 ls
+ 1715 cd server
+ 1716 ls
+ 1717 mkdir session
+ 1718 cd session
+ 1719 ls
+ 1720 touch session.js
+ 1721 clear
+ 1722 cd ..
+ 1723 ls
+ 1724 node server.js
+ 1725 clear
+ 1726 node server.js
+ 1727 clear
+ 1728 node server.js
+ 1729 clear
+ 1730 node server.js
+ 1731 clear
+ 1732 node server.js
+ 1733 clear
+ 1734 node server.js
+ 1735 clear
+ 1736 node server.js
+ 1737 clear
+ 1738 node server.js
+ 1739 clear
+ 1740 node server.js
+ 1741 clear
+ 1742 node server.js
+ 1743 clear
+ 1744 node server.js
+ 1745 clear
+ 1746 node server.js
+ 1747 clear
+ 1748 ls
+ 1749 clear
+ 1750 node server.js
+ 1751 clear
+ 1752 ls
+ 1753 cd ..
+ 1754 ls
+ 1755 ga
+ 1756 gc "added SessionManager class"
+ 1757 gp
+ 1758 clear
+ 1759 ls
+ 1760 cd server
+ 1761 ls
+ 1762 mkdir tests
+ 1763 cd tests
+ 1764 touch volunteer.js
+ 1765 touch order.js
+ 1766 touch buyer.js
+ 1767 cd ..
+ 1768 ls
+ 1769 cd models
+ 1770 ls
+ 1771 cd ..
+ 1772 cd tests
+ 1773 ls
+ 1774 touch artist.js
+ 1775 clear
+ 1776 cd ..
+ 1777 ls
+ 1778 npm install chai chai-http --save
+ 1779 clear
+ 1780 npm install mocha --save
+ 1781 clear
+ 1782 ls
+ 1783 cd tests
+ 1784 ls
+ 1785 mocha artist.js
+ 1786 cd ..
+ 1787 ls
+ 1788 mocha tests/artist.js
+ 1789 clear
+ 1790 ls
+ 1791 mkdir config
+ 1792 cd config
+ 1793 touch default.json
+ 1794 touch dev.json
+ 1795 touch test.json
+ 1796 clear
+ 1797 npm uninstall connect-mongo mocha chai cha-http --save
+ 1798 clear
+ 1799 ls
+ 1800 npm uninstall chai-http --save
+ 1801 clear
+ 1802 npm install mocha chai chai-http --save-dev
+ 1803 clear
+ 1804 cd ..
+ 1805 ls
+ 1806 npm test
+ 1807 cd tests
+ 1808 npm test
+ 1809 ls
+ 1810 mocha artist.js
+ 1811 cd ..
+ 1812 ls
+ 1813 mocha tests/artist.js
+ 1814 clear
+ 1815 npm test
+ 1816 cd tests
+ 1817 npm test
+ 1818 npm test art
+ 1819 clear
+ 1820 ls
+ 1821 clear
+ 1822 ls
+ 1823 cd ..
+ 1824 open .
+ 1825 clear
+ 1826 ls
+ 1827 npm test
+ 1828 clear
+ 1829 ./mongod
+ 1830 npm test
+ 1831 cd Desktop/Work/art_fair
+ 1832 clear
+ 1833 cd server
+ 1834 clear
+ 1835 ls
+ 1836 node server.js
+ 1837 clear
+ 1838 npm test
+ 1839 clear
+ 1840 npm test
+ 1841 clear
+ 1842 npm test
+ 1843 clear
+ 1844 npm test
+ 1845 clear
+ 1846 npm test
+ 1847 clear
+ 1848 npm test
+ 1849 clear
+ 1850 npm test
+ 1851 clear
+ 1852 npm start
+ 1853 clear
+ 1854 ls
+ 1855 npm test
+ 1856 clear
+ 1857 npm test
+ 1858 clear
+ 1859 node server.js
+ 1860 clear
+ 1861 ls
+ 1862 node server.js
+ 1863 ./mongo
+ 1864 node server.js
+ 1865 clear
+ 1866 npm test
+ 1867 clear
+ 1868 npm test
+ 1869 clear
+ 1870 npm test
+ 1871 clear
+ 1872 npm test
+ 1873 clear
+ 1874 node server.js
+ 1875 clear
+ 1876 npm test
+ 1877 clear
+ 1878 npm start
+ 1879 clear
+ 1880 npm test
+ 1881 clear
+ 1882 npm test
+ 1883 clear
+ 1884 npm test
+ 1885 clear
+ 1886 npm test
+ 1887 clear
+ 1888 npm test
+ 1889 clear
+ 1890 npm test
+ 1891 clear
+ 1892 npm test
+ 1893 clear
+ 1894 npm test
+ 1895 clear
+ 1896 npm start
+ 1897 clear
+ 1898 npm test
+ 1899 clear
+ 1900 npm test
+ 1901 clear
+ 1902 npm test
+ 1903 clear
+ 1904 npm test
+ 1905 clear
+ 1906 node server.js
+ 1907 clear
+ 1908 ls
+ 1909 npm test
+ 1910 clear
+ 1911 npm test
+ 1912 clear
+ 1913 npm test
+ 1914 clear
+ 1915 npm test
+ 1916 clear
+ 1917 npm start
+ 1918 clear
+ 1919 node server.js
+ 1920 clear
+ 1921 npm test
+ 1922 clear
+ 1923 npm test
+ 1924 clear
+ 1925 npm test
+ 1926 clear
+ 1927 npm tets
+ 1928 clear
+ 1929 npm test
+ 1930 clear
+ 1931 npm test
+ 1932 clear
+ 1933 npm test
+ 1934 clear
+ 1935 cd ..
+ 1936 ls
+ 1937 ga
+ 1938 gc "mocha/chai tests for artist done"
+ 1939 clear
+ 1940 ls
+ 1941 gp
+ 1942 clear
+ 1943 ls
+ 1944 cd server
+ 1945 ls
+ 1946 node server.js
+ 1947 ./mongod
+ 1948 clear
+ 1949 node server.js
+ 1950 clear
+ 1951 ls
+ 1952 npm test
+ 1953 clear
+ 1954 ./mongod
+ 1955 npm test
+ 1956 clear
+ 1957 npm test
+ 1958 clear
+ 1959 cd ..
+ 1960 ls
+ 1961 ga
+ 1962 gc "changed artist PUT"
+ 1963 gp
+ 1964 clear
+ 1965 ls
+ 1966 cd server/ls
+ 1967 cd server
+ 1968 ls
+ 1969 cd session
+ 1970 ls
+ 1971 touch try.js
+ 1972 cd ..
+ 1973 ls
+ 1974 clear
+ 1975 ls
+ 1976 clear
+ 1977 npm start
+ 1978 clear
+ 1979 ./mongod
+ 1980 npm start
+ 1981 clear
+ 1982 npm start
+ 1983 clear
+ 1984 ./mongo
+ 1985 npm start
+ 1986 clear
+ 1987 cd ..
+ 1988 ls
+ 1989 ga
+ 1990 gc "modified module layout of SessionManager"
+ 1991 gp
+ 1992 clear
+ 1993 cd server
+ 1994 ls
+ 1995 npm install socket.io --save
+ 1996 clear
+ 1997 ls
+ 1998 mkdir socket
+ 1999 cd socket
+ 2000 touch socket.js
+ 2001 cd ..
+ 2002 ls
+ 2003 clear
+ 2004 ls
+ 2005 clear
+ 2006 ls
+ 2007 npm start
+ 2008 clear
+ 2009 npm start
+ 2010 clear
+ 2011 npm start
+ 2012 clear
+ 2013 ./mongod
+ 2014 npm start
+ 2015 clear
+ 2016 npm start
+ 2017 clear
+ 2018 node server.js
+ 2019 ./mongo
+ 2020 clear
+ 2021 node server.js
+ 2022 clear
+ 2023 node server.js
+ 2024 cd ../..
+ 2025 ls
+ 2026 mkdir practice
+ 2027 cd practice
+ 2028 ls
+ 2029 touch server.js
+ 2030 npm init
+ 2031 clear
+ 2032 npm install express socket.io http morgan body-parser --save
+ 2033 clear
+ 2034 ls
+ 2035 node server.js
+ 2036 clear
+ 2037 node server.js
+ 2038 cd ..
+ 2039 ls
+ 2040 rm -rf practice
+ 2041 cd art_fair
+ 2042 ls
+ 2043 clear
+ 2044 ls
+ 2045 cd server
+ 2046 ls
+ 2047 clear
+ 2048 ls
+ 2049 clear
+ 2050 npm test
+ 2051 clear
+ 2052 npm test
+ 2053 clear
+ 2054 npm test
+ 2055 clear
+ 2056 node server.js
+ 2057 clear
+ 2058 npm test
+ 2059 clear
+ 2060 ls
+ 2061 npm test
+ 2062 clear
+ 2063 npm test
+ 2064 clear
+ 2065 cd ..
+ 2066 ga
+ 2067 gc "SocketManager, added DELETE test"
+ 2068 clear
+ 2069 gp
+ 2070 clear
+ 2071 ls
+ 2072 cd server
+ 2073 ls
+ 2074 ls -a
+ 2075 clear
+ 2076 cd ..
+ 2077 ga
+ 2078 gc "testing templates"
+ 2079 gp
+ 2080 clear
+ 2081 ga
+ 2082 gc "server cleanup"
+ 2083 gp
+ 2084 clear
+ 2085 ls
+ 2086 cd server
+ 2087 ls
+ 2088 cd
+ 2089 clear
+ 2090 ls
+ 2091 cd Desktop/Genus
+ 2092 ls
+ 2093 clear
+ 2094 ls
+ 2095 cd mity_gpp
+ 2096 ls
+ 2097 git branch
+ 2098 git branch -v -a
+ 2099 git log
+ 2100 clear
+ 2101 git checkout bd04b5e68e2b758099caf99abeb5c513188a8e77
+ 2102 git branch
+ 2103 git checkout bug0016
+ 2104 git branch
+ 2105 clear
+ 2106 ls
+ 2107 git log
+ 2108 git reset --hard bd04b5e68e2b758099caf99abeb5c513188a8e77
+ 2109 git branch -v -a
+ 2110 git push -f origin bug0016
+ 2111 clear
+ 2112 ls
+ 2113 git log
+ 2114 cd ../..
+ 2115 cd Work/art_fair
+ 2116 ls
+ 2117 clea
+ 2118 cd server
+ 2119 clear
+ 2120 ls
+ 2121 npm test
+ 2122 ./mongod
+ 2123 clear
+ 2124 npm test
+ 2125 clear
+ 2126 npm test
+ 2127 clear
+ 2128 npm test
+ 2129 clear
+ 2130 npm start
+ 2131 clear
+ 2132 npm test
+ 2133 clear
+ 2134 npm test
+ 2135 clear
+ 2136 npm test
+ 2137 clear
+ 2138 npm test
+ 2139 clear
+ 2140 npm test
+ 2141 clear
+ 2142 npm test
+ 2143 clear
+ 2144 npm test
+ 2145 clear
+ 2146 npm test
+ 2147 clear
+ 2148 npm test
+ 2149 clear
+ 2150 npm test
+ 2151 clear
+ 2152 npm test
+ 2153 clear
+ 2154 npm test
+ 2155 clear
+ 2156 npm test
+ 2157 clear
+ 2158 npm test
+ 2159 clear
+ 2160 npm test
+ 2161 clear
+ 2162 npm test
+ 2163 clear
+ 2164 npm test
+ 2165 clear
+ 2166 npm test
+ 2167 clear
+ 2168 npm test
+ 2169 clear
+ 2170 npm test
+ 2171 clear
+ 2172 ls
+ 2173 cd ..
+ 2174 ls
+ 2175 ga
+ 2176 gc "buyer testing interface"
+ 2177 gp
+ 2178 clear
+ 2179 ls
+ 2180 ls -a
+ 2181 rm .DS_Store
+ 2182 ls
+ 2183 cd Desktop/Genus
+ 2184 ls
+ 2185 cd mity_gpp
+ 2186 ls -a
+ 2187 clear
+ 2188 ls
+ 2189 cd ..
+ 2190 ls
+ 2191 rm -rf art_fair
+ 2192 git clone https://github.com/jonahpelfrey/art_fair.git
+ 2193 clear
+ 2194 ls
+ 2195 cd art_fair
+ 2196 ls
+ 2197 ls -a
+ 2198 cd server
+ 2199 ls
+ 2200 npm install
+ 2201 vim package.json
+ 2202 clear
+ 2203 ls
+ 2204 ./mongod
+ 2205 node server.js
+ 2206 clear
+ 2207 node server.js
+ 2208 clear
+ 2209 ls
+ 2210 ls -a
+ 2211 touch .env
+ 2212 vim .env
+ 2213 clear
+ 2214 node server.js
+ 2215 ls
+ 2216 ls -a
+ 2217 vim .gitignore
+ 2218 clear
+ 2219 ls
+ 2220 ls -a
+ 2221 rm .gitignore
+ 2222 rm .env
+ 2223 clear
+ 2224 ls
+ 2225 ls -a
+ 2226 cd ..
+ 2227 ls
+ 2228 ls -a
+ 2229 touch .gitignore
+ 2230 vim .gitignore
+ 2231 clear
+ 2232 ls
+ 2233 ga
+ 2234 gc "cleanup"
+ 2235 gp
+ 2236 ls
+ 2237 ls -a
+ 2238 clear
+ 2239 ls
+ 2240 ls -a
+ 2241 rm .DS_Store
+ 2242 ga
+ 2243 gc "ds"
+ 2244 gp
+ 2245 clear
+ 2246 ls
+ 2247 ls -a
+ 2248 cd ..
+ 2249 ls
+ 2250 rm -rf art_fair
+ 2251 git clone https://github.com/jonahpelfrey/art_fair.git
+ 2252 clear
+ 2253 ls
+ 2254 cd art_fair
+ 2255 ls
+ 2256 ls -a
+ 2257 cd server
+ 2258 ls
+ 2259 cd ..
+ 2260 ls
+ 2261 vim .env
+ 2262 clear
+ 2263 ls
+ 2264 cd server
+ 2265 ls
+ 2266 npm install
+ 2267 node server.js
+ 2268 clear
+ 2269 ls
+ 2270 ls -a
+ 2271 rm -rf node_modules
+ 2272 cd ..
+ 2273 ls
+ 2274 ls -a
+ 2275 rm .env
+ 2276 ls
+ 2277 clear
+ 2278 ls -a
+ 2279 vim .gitignore
+ 2280 clear
+ 2281 ls
+ 2282 ls -a
+ 2283 cd server
+ 2284 ls
+ 2285 cd ..
+ 2286 ls
+ 2287 ga
+ 2288 gc "bs"
+ 2289 clear
+ 2290 gp
+ 2291 cd ..
+ 2292 ls
+ 2293 rm -rf art_fair
+ 2294 ls
+ 2295 git clone https://github.com/jonahpelfrey/art_fair.git
+ 2296 clear
+ 2297 ls
+ 2298 cd art_fair
+ 2299 ls
+ 2300 ls -a
+ 2301 cd server
+ 2302 ls
+ 2303 npm install
+ 2304 clear
+ 2305 ls
+ 2306 ls -a
+ 2307 cd ..
+ 2308 ls
+ 2309 ls -a
+ 2310 cd server
+ 2311 ls
+ 2312 clear
+ 2313 vim .env
+ 2314 clear
+ 2315 ls -a
+ 2316 ./mongod
+ 2317 npm start
+ 2318 clear
+ 2319 npm test
+ 2320 clear
+ 2321 ls
+ 2322 cd api
+ 2323 ls
+ 2324 cd auth
+ 2325 ls
+ 2326 vim config.js
+ 2327 rm config.js
+ 2328 cd ..
+ 2329 ls
+ 2330 clear
+ 2331 ls
+ 2332 cd ..
+ 2333 ls
+ 2334 ls -a
+ 2335 ga
+ 2336 gc "removed config"
+ 2337 gp
+ 2338 clear
+ 2339 ls
+ 2340 cd server
+ 2341 ls
+ 2342 vim ~/.zshrc
+ 2343 clear
+ 2344 ls
+ 2345 ./mongod
+ 2346 npm test
+ 2347 clear
+ 2348 npm test
+ 2349 clear
+ 2350 npm test
+ 2351 clear
+ 2352 npm start
+ 2353 clear
+ 2354 npm test
+ 2355 cleaer
+ 2356 clear
+ 2357 npm test
+ 2358 clear
+ 2359 npm start
+ 2360 clear
+ 2361 npm test
+ 2362 clear
+ 2363 npm test
+ 2364 clear
+ 2365 npm test
+ 2366 clear
+ 2367 npm test
+ 2368 clear
+ 2369 npm test
+ 2370 clear
+ 2371 npm test
+ 2372 clear
+ 2373 npm test
+ 2374 clear
+ 2375 npm test
+ 2376 clear
+ 2377 npm test
+ 2378 clear
+ 2379 npm test
+ 2380 clear
+ 2381 npm test
+ 2382 clear
+ 2383 npm test
+ 2384 clear
+ 2385 npm test
+ 2386 clear
+ 2387 cd ..
+ 2388 ls -a
+ 2389 ls
+ 2390 ga
+ 2391 gc "completed volunteer test interface. all tests passing "
+ 2392 gp
+ 2393 clear
+ 2394 ls
+ 2395 clear
+ 2396 ls
+ 2397 cd server
+ 2398 clear
+ 2399 ls
+ 2400 npm test
+ 2401 clear
+ 2402 ./mongod
+ 2403 npm test
+ 2404 clear
+ 2405 ls
+ 2406 clear
+ 2407 npm test
+ 2408 clear
+ 2409 npm test
+ 2410 clear
+ 2411 npm test
+ 2412 clear
+ 2413 ls
+ 2414 npm test
+ 2415 clear
+ 2416 npm test
+ 2417 clear
+ 2418 npm test
+ 2419 clear
+ 2420 npm test
+ 2421 clear
+ 2422 npm test
+ 2423 clear
+ 2424 npm test
+ 2425 clear
+ 2426 npm test
+ 2427 clear
+ 2428 npm test
+ 2429 clear
+ 2430 npm test
+ 2431 clear
+ 2432 cd ..
+ 2433 ls -a
+ 2434 ga
+ 2435 gc "order test interface started"
+ 2436 gp
+ 2437 clear
+ 2438 cd server
+ 2439 npm test
+ 2440 clear
+ 2441 npm test
+ 2442 clear
+ 2443 npm test
+ 2444 clear
+ 2445 npm test
+ 2446 clear
+ 2447 npm test
+ 2448 clear
+ 2449 npm test
+ 2450 clear
+ 2451 ls
+ 2452 clear
+ 2453 npm test
+ 2454 clear
+ 2455 npm test
+ 2456 clear
+ 2457 npm test
+ 2458 clear
+ 2459 npm test
+ 2460 clear
+ 2461 npm test
+ 2462 clear
+ 2463 npm test
+ 2464 clear
+ 2465 npm test
+ 2466 clear
+ 2467 npm test
+ 2468 clear
+ 2469 npm test
+ 2470 clear
+ 2471 npm test
+ 2472 clear
+ 2473 npm test
+ 2474 clear
+ 2475 npm test
+ 2476 clear
+ 2477 npm test
+ 2478 clear
+ 2479 cd ..
+ 2480 ls -a
+ 2481 cd server
+ 2482 ls -a
+ 2483 cd ..
+ 2484 ls
+ 2485 ga
+ 2486 gc "all schema tests, object route tests, DONE & PASSING, 24 tests total"
+ 2487 gp
+ 2488 clear
+ 2489 ls
+ 2490 ssh-keygen -t rsa
+ 2491 cd /Users/jonahpelfrey/.ssh/
+ 2492 ls
+ 2493 pwd
+ 2494 ls -a
+ 2495 clear
+ 2496 ssh-keygen -t rsa
+ 2497 hostname
+ 2498 vim /Users/jonahpelfrey/.ssh/art_fair.pub
+ 2499 clear
+ 2500 ls
+ 2501 cd server
+ 2502 ls
+ 2503 cd ..
+ 2504 open .
+ 2505 clear
+ 2506 ls -a
+ 2507 ga
+ 2508 gc "changed client structure"
+ 2509 clear
+ 2510 gp
+ 2511 ./mongod
+ 2512 clear
+ 2513 ls
+ 2514 cd server
+ 2515 ls
+ 2516 npm start
+ 2517 clear
+ 2518 npm start
+ 2519 clear
+ 2520 npm start
+ 2521 clear
+ 2522 npm install path --save
+ 2523 clear
+ 2524 ls
+ 2525 node server.js
+ 2526 clear
+ 2527 ls
+ 2528 node server.js
+ 2529 clear
+ 2530 ls
+ 2531 cd ..
+ 2532 ls
+ 2533 cd public
+ 2534 ls
+ 2535 ng build
+ 2536 npm install
+ 2537 clear
+ 2538 ng build
+ 2539 clear
+ 2540 ls
+ 2541 clear
+ 2542 ls
+ 2543 cd ..
+ 2544 ls
+ 2545 open .
+ 2546 clear
+ 2547 node server
+ 2548 clear
+ 2549 ./mongod
+ 2550 node server
+ 2551 clear
+ 2552 ls
+ 2553 cd server
+ 2554 ls
+ 2555 node server.js
+ 2556 clear
+ 2557 node server.js
+ 2558 cd ..
+ 2559 open .
+ 2560 cd server
+ 2561 ls
+ 2562 clear
+ 2563 npm test
+ 2564 clear
+ 2565 cd ..
+ 2566 ga
+ 2567 gc "connected express to angular dist"
+ 2568 gp
+ 2569 cd Desktop/Genus
+ 2570 ls
+ 2571 clear
+ 2572 history | grep checkout
+ 2573 clear
+ 2574 ls
+ 2575 cd mity_gpp
+ 2576 ls
+ 2577 git branch
+ 2578 git checkout -b queuetest
+ 2579 ls
+ 2580 clear
+ 2581 git branch
+ 2582 clear
+ 2583 open .
+ 2584 clear
+ 2585 ls
+ 2586 cd public
+ 2587 ls
+ 2588 ng service dataservice
+ 2589 ng g service dataservice
+ 2590 clear
+ 2591 ng g service data
+ 2592 clear
+ 2593 ./mongod
+ 2594 ls
+ 2595 ng build
+ 2596 clear
+ 2597 cd ..
+ 2598 ls
+ 2599 cd server
+ 2600 ls
+ 2601 node server.js
+ 2602 clear
+ 2603 node server.js
+ 2604 cd ..
+ 2605 ls
+ 2606 cd public
+ 2607 ls
+ 2608 ng build
+ 2609 clear
+ 2610 cd ..
+ 2611 ls
+ 2612 cd server
+ 2613 node server.js
+ 2614 cd ..
+ 2615 ls
+ 2616 cd public
+ 2617 clear
+ 2618 ng build
+ 2619 clear
+ 2620 cd ..
+ 2621 ls
+ 2622 cd server
+ 2623 ls
+ 2624 node server.js
+ 2625 clear
+ 2626 cd ..
+ 2627 cd public
+ 2628 ls
+ 2629 clear
+ 2630 ng build
+ 2631 cd Desktop/Work/art_fair/server
+ 2632 clear
+ 2633 ls
+ 2634 clear
+ 2635 ng build
+ 2636 clear
+ 2637 node server.js
+ 2638 ng build
+ 2639 clear
+ 2640 ls
+ 2641 node server.js
+ 2642 ng build
+ 2643 clear
+ 2644 node server.js
+ 2645 clear
+ 2646 ls
+ 2647 ng build
+ 2648 clear
+ 2649 npm test
+ 2650 clear
+ 2651 node server.js
+ 2652 npm test
+ 2653 clear
+ 2654 node server.js
+ 2655 ng build
+ 2656 clear
+ 2657 node server.js
+ 2658 clear
+ 2659 node server.js
+ 2660 ng build
+ 2661 clear
+ 2662 node server.js
+ 2663 clear
+ 2664 node server.js
+ 2665 clear
+ 2666 ng build
+ 2667 node server.js
+ 2668 ng -v
+ 2669 angular -v
+ 2670 ng --version
+ 2671 clear
+ 2672 ls
+ 2673 cd ..
+ 2674 ls
+ 2675 ga
+ 2676 gc "basic data service"
+ 2677 gp
+ 2678 clear
+ 2679 ls
+ 2680 cd public
+ 2681 ls
+ 2682 npm install @angular/{common,compiler,compiler-cli,core,forms,http,platform-browser,platform-browser-dynamic,platform-server,router,animations}@latest typescript@latest --save
+ 2683 clear
+ 2684 ng -v
+ 2685 clear
+ 2686 ng build
+ 2687 clear
+ 2688 ng build
+ 2689 clear
+ 2690 ls
+ 2691 node server.js
+ 2692 clear
+ 2693 ./mongod
+ 2694 clear
+ 2695 node server.js
+ 2696 clear
+ 2697 ls
+ 2698 cd ..
+ 2699 ls
+ 2700 ga
+ 2701 gc "updated to Angular 4"
+ 2702 gp
+ 2703 clear
+ 2704 ls
+ 2705 clear
+ 2706 ls
+ 2707 cd public
+ 2708 ls
+ 2709 clear
+ 2710 ng build
+ 2711 clear
+ 2712 ./mongod
+ 2713 ng build
+ 2714 node server.js
+ 2715 clear
+ 2716 ng build
+ 2717 clear
+ 2718 node server.js
+ 2719 clear
+ 2720 ng build
+ 2721 clear
+ 2722 node server.js
+ 2723 clear
+ 2724 npm test
+ 2725 clear
+ 2726 ng build
+ 2727 node server.js
+ 2728 clear
+ 2729 ls
+ 2730 cd src
+ 2731 ls
+ 2732 cd app
+ 2733 ls
+ 2734 touch models.ts
+ 2735 clear
+ 2736 cd ../..
+ 2737 ls
+ 2738 clear
+ 2739 ng build
+ 2740 clear
+ 2741 node server.js
+ 2742 clear
+ 2743 ng build
+ 2744 clear
+ 2745 node server.js
+ 2746 clear
+ 2747 ng build
+ 2748 clear
+ 2749 node server.js
+ 2750 ng build
+ 2751 clear
+ 2752 node server.js
+ 2753 ng build
+ 2754 clear
+ 2755 node server.js
+ 2756 clear
+ 2757 npm test
+ 2758 clear
+ 2759 npm test
+ 2760 clear
+ 2761 npm test
+ 2762 clear
+ 2763 npm test
+ 2764 clear
+ 2765 ls
+ 2766 cd app
+ 2767 ls
+ 2768 clear
+ 2769 cd src
+ 2770 ls
+ 2771 cd app
+ 2772 ls
+ 2773 touch post.interceptor.ts
+ 2774 cd ../..
+ 2775 clear
+ 2776 ls
+ 2777 open .
+ 2778 ls src/app
+ 2779 open .
+ 2780 clear
+ 2781 ng build
+ 2782 node server.js
+ 2783 ng build
+ 2784 clear
+ 2785 node server.js
+ 2786 clear
+ 2787 ls
+ 2788 node server.js
+ 2789 clear
+ 2790 ng build
+ 2791 node server.js
+ 2792 ng build
+ 2793 clear
+ 2794 node server.js
+ 2795 clear
+ 2796 ng build
+ 2797 clear
+ 2798 node server.js
+ 2799 ng build
+ 2800 clear
+ 2801 node server.js
+ 2802 clear
+ 2803 ng build
+ 2804 clear
+ 2805 node server.js
+ 2806 clear
+ 2807 npm test
+ 2808 cd ..
+ 2809 ls
+ 2810 clear
+ 2811 ga
+ 2812 gc "Added HttpClient, interface models, interceptor for requests"
+ 2813 gp
+ 2814 cd public
+ 2815 clear
+ 2816 ng build
+ 2817 clear
+ 2818 ls
+ 2819 node server.js
+ 2820 ./mongod
+ 2821 clear
+ 2822 node server.js
+ 2823 ng build
+ 2824 clear
+ 2825 node server.js
+ 2826 ng build
+ 2827 clear
+ 2828 node server.js
+ 2829 ng build
+ 2830 clear
+ 2831 node server.js
+ 2832 clear
+ 2833 node server.js
+ 2834 clear
+ 2835 npm test
+ 2836 clear
+ 2837 npm test
+ 2838 clear
+ 2839 npm test
+ 2840 ng build
+ 2841 clear
+ 2842 node server.js
+ 2843 ./mongo
+ 2844 clear
+ 2845 ng build
+ 2846 clear
+ 2847 node server.js
+ 2848 clear
+ 2849 ng build
+ 2850 clear
+ 2851 node server.js
+ 2852 clear
+ 2853 cd ..
+ 2854 ga
+ 2855 gc "refactored data service, added more methods, observable handling"
+ 2856 gp
+ 2857 clear
+ 2858 ./mongod
+ 2859 node server.js
+ 2860 cd public
+ 2861 ng build
+ 2862 clear
+ 2863 node server.js
+ 2864 clear
+ 2865 ng build
+ 2866 clear
+ 2867 node server.js
+ 2868 ng build
+ 2869 clear
+ 2870 node server.js
+ 2871 clear
+ 2872 cd ..
+ 2873 ls
+ 2874 ga
+ 2875 gc "successfully retrieving from api, and populating table"
+ 2876 gp
+ 2877 ./mongod
+ 2878 clear
+ 2879 node server.js
+ 2880 ./mongo
+ 2881 ./mongod
+ 2882 ./mongo
+ 2883 clear
+ 2884 node server.js
+ 2885 clear
+ 2886 node server.js
+ 2887 ./mongo
+ 2888 clear
+ 2889 node server.js
+ 2890 clear
+ 2891 node server.js
+ 2892 clear
+ 2893 ls
+ 2894 node server.js
+ 2895 cd public
+ 2896 ls
+ 2897 ng build
+ 2898 node server.js
+ 2899 clear
+ 2900 ng serve
+ 2901 clear
+ 2902 ng build
+ 2903 clear
+ 2904 node server.js
+ 2905 ng build
+ 2906 node server.js
+ 2907 clear
+ 2908 ng serve
+ 2909 clear
+ 2910 ls
+ 2911 ng build
+ 2912 clear
+ 2913 node server.js
+ 2914 clear
+ 2915 ng build
+ 2916 ./mongo
+ 2917 clear
+ 2918 node server.js
+ 2919 ./mongo
+ 2920 node server.js
+ 2921 clear
+ 2922 node server.js
+ 2923 clear
+ 2924 node server.js
+ 2925 clear
+ 2926 node server.js
+ 2927 ng build
+ 2928 node server.js
+ 2929 clear
+ 2930 ls
+ 2931 cd ..
+ 2932 ls
+ 2933 ga
+ 2934 gc "Added tables for each object. All tables are receiving data properly. Added dataservice calls to app component\n"
+ 2935 gp
+ 2936 clear
+ 2937 ls
+ 2938 cd public
+ 2939 ls
+ 2940 node server.js
+ 2941 ng build
+ 2942 clear
+ 2943 node server.js
+ 2944 clear
+ 2945 ng serve
+ 2946 clear
+ 2947 ls
+ 2948 cd ..
+ 2949 git status
+ 2950 git diff
+ 2951 clear
+ 2952 node server.js
+ 2953 clear
+ 2954 cd public
+ 2955 ls
+ 2956 ng build
+ 2957 clear
+ 2958 ls
+ 2959 node server.js
+ 2960 clear
+ 2961 cd ..
+ 2962 ls
+ 2963 ga
+ 2964 gc "changed order table"
+ 2965 gp
+ 2966 node server.js
+ 2967 cd public
+ 2968 ng build
+ 2969 clear
+ 2970 node server.js
+ 2971 clear
+ 2972 ng build
+ 2973 node server.js
+ 2974 ng build
+ 2975 clear
+ 2976 node server.js
+ 2977 clear
+ 2978 ng build
+ 2979 node server.js
+ 2980 ng build
+ 2981 clear
+ 2982 node server.js
+ 2983 clear
+ 2984 ng build
+ 2985 clear
+ 2986 node server.js
+ 2987 ng build
+ 2988 node server.js
+ 2989 clear
+ 2990 ng build
+ 2991 clear
+ 2992 node server.js
+ 2993 clear
+ 2994 ng build
+ 2995 clear
+ 2996 node server.js
+ 2997 clear
+ 2998 ng build
+ 2999 clear
+ 3000 node server.js
+ 3001 ng build
+ 3002 node server.js
+ 3003 clear
+ 3004 ng build
+ 3005 clear
+ 3006 node server.js
+ 3007 clear
+ 3008 cd ..
+ 3009 ga
+ 3010 gc "bootstrap cdn"
+ 3011 gp
+ 3012 open -a TextEdit ~/.zshrc
+ 3013 cd
+ 3014 ls
+ 3015 ls -a
+ 3016 cd .ssh
+ 3017 ls
+ 3018 clear
+ 3019 ls
+ 3020 ls -a
+ 3021 ls
+ 3022 cd .ssh
+ 3023 ls
+ 3024 cd
+ 3025 clear
+ 3026 pwd
+ 3027 ls -a
+ 3028 clear
+ 3029 ls
+ 3030 cd public
+ 3031 ls
+ 3032 node server.js
+ 3033 ./mongod
+ 3034 clear
+ 3035 node server.js
+ 3036 ng -v
+ 3037 clear
+ 3038 ng build
+ 3039 clear
+ 3040 ls
+ 3041 node server.js
+ 3042 clear
+ 3043 ls
+ 3044 clear
+ 3045 ls
+ 3046 mongo
+ 3047 ls
+ 3048 cd /etc
+ 3049 ls
+ 3050 cd
+ 3051 clear
+ 3052 ls -a
+ 3053 vim .mongorc.js
+ 3054 cd /usr/local
+ 3055 ls
+ 3056 cd etc
+ 3057 ls
+ 3058 cd ..
+ 3059 cd bin
+ 3060 ls
+ 3061 cd ..
+ 3062 ls
+ 3063 pwd
+ 3064 ls
+ 3065 ls -a
+ 3066 vim ~/.zshrc
+ 3067 ls -a
+ 3068 echo $PATH
+ 3069 echo $HOME
+ 3070 cleawr
+ 3071 clear
+ 3072 mongo
+ 3073 mongod
+ 3074 clear
+ 3075 cd
+ 3076 clear
+ 3077 htop
+ 3078 top
+ 3079 mongod
+ 3080 clear
+ 3081 open -a TextEdit ~/.zshrc
+ 3082 echo $PATH
+ 3083 echo $HOME
+ 3084 clear
+ 3085 cd
+ 3086 pwd
+ 3087 ls -a
+ 3088 cd Desktop
+ 3089 ls
+ 3090 cd Genus
+ 3091 ls
+ 3092 mongod
+ 3093 cd
+ 3094 clear
+ 3095 cd Desktop/Work/art_fair
+ 3096 l
+ 3097 sclear
+ 3098 clear
+ 3099 cd server
+ 3100 ls
+ 3101 npm install nodemon --save-dev
+ 3102 clear
+ 3103 nodemon server.js
+ 3104 ls
+ 3105 npm install -g nodemon
+ 3106 clear
+ 3107 nodemon server.js
+ 3108 mongod
+ 3109 clear
+ 3110 nodemon server.js
+ 3111 clear
+ 3112 ls
+ 3113 ng serve
+ 3114 clear
+ 3115 ls
+ 3116 ng build
+ 3117 mongod
+ 3118 clear
+ 3119 node server.js
+ 3120 ng build
+ 3121 node server.js
+ 3122 ng build
+ 3123 clear
+ 3124 node server.js
+ 3125 mongo
+ 3126 clear
+ 3127 ls
+ 3128 ng build
+ 3129 ls
+ 3130 node server.js
+ 3131 clear
+ 3132 ng build
+ 3133 clear
+ 3134 node server.js
+ 3135 clear
+ 3136 ng build
+ 3137 clear
+ 3138 node server.js
+ 3139 clear
+ 3140 ng build
+ 3141 clear
+ 3142 node server.js
+ 3143 clear
+ 3144 ng build
+ 3145 mongod
+ 3146 clear
+ 3147 node server.js
+ 3148 ng build
+ 3149 clear
+ 3150 mongod
+ 3151 node server.js
+ 3152 ng build
+ 3153 node server.js
+ 3154 clear
+ 3155 ng build
+ 3156 node server.js
+ 3157 ng build
+ 3158 clear
+ 3159 node server.js
+ 3160 ng build
+ 3161 clear
+ 3162 node server.js
+ 3163 ng build
+ 3164 node server.js
+ 3165 ng build
+ 3166 clear
+ 3167 node server.js
+ 3168 ng build
+ 3169 clear
+ 3170 node server.js
+ 3171 ng build
+ 3172 clear
+ 3173 node server.js
+ 3174 clera
+ 3175 ng build
+ 3176 clear
+ 3177 node server.js
+ 3178 clear
+ 3179 ng build
+ 3180 clear
+ 3181 node server.js
+ 3182 clear
+ 3183 cd ..
+ 3184 ls
+ 3185 git status
+ 3186 ga
+ 3187 gc "Behavior Subject, observable data service"
+ 3188 gp
+ 3189 clear
+ 3190 cd public
+ 3191 ng build
+ 3192 mongo
+ 3193 mongod
+ 3194 mongo
+ 3195 node server.js
+ 3196 clear
+ 3197 node server.js
+ 3198 ng build
+ 3199 node server.js
+ 3200 ng build
+ 3201 clear
+ 3202 node server.js
+ 3203 ng build
+ 3204 clear
+ 3205 node server.js
+ 3206 ng build
+ 3207 clear
+ 3208 node server.js
+ 3209 ng build
+ 3210 clear
+ 3211 node server.js
+ 3212 ng build
+ 3213 clear
+ 3214 node server.js
+ 3215 clear
+ 3216 ng build
+ 3217 clear
+ 3218 node server.js
+ 3219 clear
+ 3220 node server.js
+ 3221 ng build
+ 3222 clear
+ 3223 node server.js
+ 3224 ng build
+ 3225 clear
+ 3226 node server.js
+ 3227 ng build
+ 3228 node server.js
+ 3229 clear
+ 3230 ng build
+ 3231 node server.js
+ 3232 ng build
+ 3233 clear
+ 3234 node server.js
+ 3235 ng build
+ 3236 mongod
+ 3237 clear
+ 3238 node server.js
+ 3239 ng build
+ 3240 clear
+ 3241 node server.js
+ 3242 cd ..
+ 3243 clear
+ 3244 ls
+ 3245 ga
+ 3246 gc "Data service adding / removing for artists. Updated methods for all other objects"
+ 3247 gp
+ 3248 mongod
+ 3249 clear
+ 3250 mongod
+ 3251 node server.js
+ 3252 mongod
+ 3253 cd ..
+ 3254 mongod
+ 3255 cd art_fair
+ 3256 mongod
+ 3257 node server.js
+ 3258 clear
+ 3259 node server.js
+ 3260 mongo
+ 3261 node server.js
+ 3262 clear
+ 3263 node server.js
+ 3264 clear
+ 3265 node server.js
+ 3266 clear
+ 3267 cd
+ 3268 ls
+ 3269 ls -a
+ 3270 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+ 3271 vim ~/.zshrc
+ 3272 clear
+ 3273 ls
+ 3274 clear
+ 3275 ls -a
+ 3276 cd .oh-my-zsh
+ 3277 ls
+ 3278 cd themes
+ 3279 ls
+ 3280 cd Desktop
+ 3281 ls
+ 3282 cd Genus
+ 3283 ls
+ 3284 cd mity_gpp
+ 3285 vim ~/.zshrc
+ 3286 clear
+ 3287 ls
+ 3288 mongod
+ 3289 ls
+ 3290 cd Desktop
+ 3291 ls
+ 3292 clear
+ 3293 ls
+ 3294 ls -a
+ 3295 cd
+ 3296 clear
+ 3297 ls -a
+ 3298 cd .oh-my-zsh/custom
+ 3299 ls
+ 3300 cd themes
+ 3301 ls
+ 3302 cd powerlevel9k
+ 3303 ls
+ 3304 vim ~/.zshrc
+ 3305 clear
+ 3306 vim ~/.zshrc
+ 3307 open ~/.zshrc
+ 3308 clear
+ 3309 ls
+ 3310 cd Desktop
+ 3311 ls
+ 3312 clear
+ 3313 ls
+ 3314 cd Work/art_fair
+ 3315 cd Desktop/Genus/mity_gpp
+ 3316 for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+ 3317 open ~/.zshrc
+ 3318 clear
+ 3319 vim ~/.zshrc
+ 3320 for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+ 3321 vim ~/.zshrc
+ 3322 clear
+ 3323 cd Desktop/Work/art_fair
+ 3324 ls
+ 3325 cd server
+ 3326 ls
+ 3327 cd Desktop/Work
+ 3328 ls
+ 3329 cd uwlipids
+ 3330 ls
+ 3331 clear
+ 3332 ls
+ 3333 ionic serve
+ 3334 node server.js
+ 3335 mongod
+ 3336 clear
+ 3337 node server.js
+ 3338 clear
+ 3339 npm test
+ 3340 clear
+ 3341 npm test
+ 3342 clear
+ 3343 git diff
+ 3344 git stash
+ 3345 npm test
+ 3346 clear
+ 3347 ls
+ 3348 cd Desktop/Work/art_fair
+ 3349 ls
+ 3350 git status
+ 3351 ls
+ 3352 git stash
+ 3353 ls
+ 3354 git stash drop
+ 3355 ls
+ 3356 clear
+ 3357 ls
+ 3358 cd server
+ 3359 ls
+ 3360 npm test
+ 3361 mongod
+ 3362 clear
+ 3363 npm test
+ 3364 clear
+ 3365 npm tets
+ 3366 clear
+ 3367 npm test
+ 3368 clear
+ 3369 npm test
+ 3370 clear
+ 3371 ls
+ 3372 npm test
+ 3373 clear
+ 3374 npm test
+ 3375 clear
+ 3376 node server.js
+ 3377 clear
+ 3378 npm test
+ 3379 clear
+ 3380 npm test
+ 3381 clear
+ 3382 npm test
+ 3383 clear
+ 3384 npm test
+ 3385 clear
+ 3386 npm test
+ 3387 clear
+ 3388 npm test
+ 3389 clear
+ 3390 npm test
+ 3391 clear
+ 3392 npm test
+ 3393 clear
+ 3394 npm test
+ 3395 clear
+ 3396 ls
+ 3397 cd ..
+ 3398 ls
+ 3399 ga
+ 3400 gc "updated order controller to update the buyer with the registered order if the order is successfully saved to the db"
+ 3401 gp
+ 3402 clear
+ 3403 ls
+ 3404 cd server
+ 3405 ls
+ 3406 npm test
+ 3407 mongod
+ 3408 clear
+ 3409 npm test
+ 3410 clear
+ 3411 npm test
+ 3412 clear
+ 3413 npm test
+ 3414 clear
+ 3415 npm test
+ 3416 clear
+ 3417 npm test
+ 3418 clear
+ 3419 npm test
+ 3420 clear
+ 3421 ls
+ 3422 cd ..
+ 3423 ls
+ 3424 ga
+ 3425 gc "updated artist schema and tests"
+ 3426 gp
+ 3427 clear
+ 3428 cd server
+ 3429 ls
+ 3430 clear
+ 3431 npm test
+ 3432 clear
+ 3433 npm test
+ 3434 cd ..
+ 3435 ls
+ 3436 clear
+ 3437 ls
+ 3438 ga
+ 3439 gc "updated buyer schema and tests"
+ 3440 gp
+ 3441 cd server
+ 3442 ls
+ 3443 clear
+ 3444 ls
+ 3445 npm test
+ 3446 clear
+ 3447 cd ..
+ 3448 ls
+ 3449 ga
+ 3450 gc "updated volunteer schema and tests"
+ 3451 gp
+ 3452 cd server
+ 3453 ls
+ 3454 clear
+ 3455 ls
+ 3456 node server.js
+ 3457 mongo
+ 3458 clear
+ 3459 node server.js
+ 3460 clear
+ 3461 npm test
+ 3462 clear
+ 3463 npm test
+ 3464 clear
+ 3465 npm test
+ 3466 clear
+ 3467 npm test
+ 3468 clear
+ 3469 git diff
+ 3470 clear
+ 3471 ls
+ 3472 npm test
+ 3473 clear
+ 3474 node server.js
+ 3475 clear
+ 3476 node server.js
+ 3477 clear
+ 3478 node server.js
+ 3479 clear
+ 3480 ls
+ 3481 node server.js
+ 3482 clear
+ 3483 cd ..
+ 3484 ls
+ 3485 cd art_fair
+ 3486 ls
+ 3487 cd public
+ 3488 ls
+ 3489 ng build
+ 3490 clear
+ 3491 node server.js
+ 3492 ng build
+ 3493 clear
+ 3494 node server.js
+ 3495 ng build
+ 3496 clear
+ 3497 node server.js
+ 3498 ng build
+ 3499 clear
+ 3500 node server.js
+ 3501 ng build
+ 3502 node server.js
+ 3503 ng build
+ 3504 clear
+ 3505 node server.js
+ 3506 ng build
+ 3507 clear
+ 3508 node server.js
+ 3509 ng build
+ 3510 clear
+ 3511 node server.js
+ 3512 ng build
+ 3513 clear
+ 3514 node server.js
+ 3515 ng build
+ 3516 clear
+ 3517 node server.js
+ 3518 ng build
+ 3519 clear
+ 3520 ls
+ 3521 node server.js
+ 3522 ng build
+ 3523 clear
+ 3524 node server.js
+ 3525 ng build
+ 3526 clear
+ 3527 node server.js
+ 3528 ng build
+ 3529 clear
+ 3530 node server.js
+ 3531 ng build
+ 3532 clear
+ 3533 node server.js
+ 3534 ng build
+ 3535 clear
+ 3536 node server.js
+ 3537 ng build
+ 3538 node server.js
+ 3539 ng build
+ 3540 node server.js
+ 3541 ng build
+ 3542 clear
+ 3543 node server.js
+ 3544 ng build
+ 3545 clear
+ 3546 node server.js
+ 3547 ng build
+ 3548 clear
+ 3549 node server.js
+ 3550 ng build
+ 3551 node server.js
+ 3552 ng build
+ 3553 clear
+ 3554 node server.js
+ 3555 ng build
+ 3556 clear
+ 3557 node server.js
+ 3558 ng build
+ 3559 clear
+ 3560 node server.js
+ 3561 ng build
+ 3562 clear
+ 3563 node server.js
+ 3564 clear
+ 3565 cd ..
+ 3566 ls
+ 3567 ga
+ 3568 gc "basic form control"
+ 3569 gp
+ 3570 clear
+ 3571 cd server
+ 3572 ls
+ 3573 node server.js
+ 3574 ng build
+ 3575 clear
+ 3576 node server.js
+ 3577 ng build
+ 3578 clear
+ 3579 node server.js
+ 3580 ng build
+ 3581 clear
+ 3582 node server.js
+ 3583 npm test
+ 3584 clear
+ 3585 cd ..
+ 3586 ls
+ 3587 ga
+ 3588 gc "added panel around form"
+ 3589 gp
+ 3590 cd server
+ 3591 node server.js
+ 3592 mongod
+ 3593 clear
+ 3594 node server.js
+ 3595 ng build
+ 3596 clear
+ 3597 node server.js
+ 3598 ng build
+ 3599 node server.js
+ 3600 mongo
+ 3601 node server.js
+ 3602 clear
+ 3603 node server.js
+ 3604 ng build
+ 3605 clear
+ 3606 node server.js
+ 3607 ng build
+ 3608 clear
+ 3609 ls
+ 3610 node server.js
+ 3611 clear
+ 3612 node server.js
+ 3613 cd ..
+ 3614 ga
+ 3615 gc "mobile responsive on initial forms"
+ 3616 gp
+ 3617 clear
+ 3618 cd server
+ 3619 ls
+ 3620 clear
+ 3621 ng build
+ 3622 node server.js
+ 3623 mongod
+ 3624 node server.js
+ 3625 ng build
+ 3626 node server.js
+ 3627 ls
+ 3628 cd src
+ 3629 ls
+ 3630 cd app
+ 3631 ls
+ 3632 clear
+ 3633 ls
+ 3634 ng g component artistform
+ 3635 ls
+ 3636 ng g component ArtistForm
+ 3637 cd ../..
+ 3638 ls
+ 3639 clear
+ 3640 ng build
+ 3641 clear
+ 3642 ng build
+ 3643 node server.js
+ 3644 clear
+ 3645 ng build
+ 3646 clear
+ 3647 node server.js
+ 3648 clear
+ 3649 ng build
+ 3650 node server.js
+ 3651 ng build
+ 3652 clear
+ 3653 node server.js
+ 3654 clear
+ 3655 ng build
+ 3656 node server.js
+ 3657 ng build
+ 3658 clear
+ 3659 node server.js
+ 3660 ng build
+ 3661 node server.js
+ 3662 ng build
+ 3663 clear
+ 3664 node server.js
+ 3665 ng build
+ 3666 node server.js
+ 3667 clear
+ 3668 ng build
+ 3669 clear
+ 3670 ng build
+ 3671 node server.js
+ 3672 clear
+ 3673 ls
+ 3674 cd ..
+ 3675 ls
+ 3676 ga
+ 3677 gc "added basic form component. includes basic validators and success/danger classes"
+ 3678 gp
+ 3679 top
+ 3680 clear
+ 3681 ls
+ 3682 mongod
+ 3683 ls
+ 3684 cd public
+ 3685 ls
+ 3686 clear
+ 3687 ls
+ 3688 ng build
+ 3689 clear
+ 3690 node server.js
+ 3691 clear
+ 3692 ls
+ 3693 ng build
+ 3694 clear
+ 3695 node server.js
+ 3696 ng build
+ 3697 node server.js
+ 3698 mongod
+ 3699 node server.js
+ 3700 cleawr
+ 3701 clear
+ 3702 cd ..
+ 3703 git diff
+ 3704 ga
+ 3705 gc "added select button field to artist table example"
+ 3706 gp
+ 3707 clear
+ 3708 ls
+ 3709 ng g component ArtistTable
+ 3710 clear
+ 3711 ls
+ 3712 cd ..
+ 3713 ls
+ 3714 ga
+ 3715 gc "added filterable table component for artist. Unfinished"
+ 3716 gp
+ 3717 cd ..
+ 3718 clear
+ 3719 ls
+ 3720 git clone https://github.com/valor-software/ng2-table.git
+ 3721 open ~/.zshrc
+ 3722 ls
+ 3723 cd Desktop
+ 3724 cd Desktop/Work
+ 3725 ls
+ 3726 cd art_fair
+ 3727 ls
+ 3728 cd Desktop/Work/art_fair
+ 3729 ls
+ 3730 cd server
+ 3731 ls
+ 3732 get_icon_names
+ 3733 ls
+ 3734 get_icon_names
+ 3735 ls
+ 3736 ls -a
+ 3737 cd .oh-my-zsh
+ 3738 ls
+ 3739 cd custom
+ 3740 clear
+ 3741 ls
+ 3742 cd themes
+ 3743 ls
+ 3744 cd powerlevel9k
+ 3745 ls
+ 3746 ls -l
+ 3747 ping google.com
+ 3748 clear
+ 3749 get_icon_names
+ 3750 ls
+ 3751 get_icon_list
+ 3752 get_icons_list
+ 3753 get_icon_names
+ 3754 clear
+ 3755 ls
+ 3756 mongod
+ 3757 clear
+ 3758 ls
+ 3759 clear
+ 3760 ls
+ 3761 clear
+ 3762 ls
+ 3763 ls -a
+ 3764 cd .oh-my-zsh
+ 3765 ls
+ 3766 cd tools
+ 3767 ls
+ 3768 cd ..
+ 3769 clear
+ 3770 ls
+ 3771 cd themes
+ 3772 ls
+ 3773 cd ..
+ 3774 ls
+ 3775 clear
+ 3776 ls
+ 3777 get_icon_names
+ 3778 ls
+ 3779 clear
+ 3780 for code ({000..255}) print -P -- "$code: %F{$code}This is how your text would look like%f"
+ 3781 clear
+ 3782 get_icon_names
+ 3783 ls
+ 3784 clear
+ 3785 ls
+ 3786 cd Desktop/Work/art_fair
+ 3787 get_icon_names
+ 3788 clear
+ 3789 ls
+ 3790 get_icon_names
+ 3791 clear
+ 3792 ls asdfsdf sdf sdf
+ 3793 ls sdf
+ 3794 ls
+ 3795 cd Desktop/Work/art_fair
+ 3796 ls
+ 3797 cd server
+ 3798 ls
+ 3799 get_icon_names
+ 3800 ls
+ 3801 cd
+ 3802 clear
+ 3803 ls
+ 3804 which
+ 3805 ls
+ 3806 cd Desktop/Work/art_fair
+ 3807 clear
+ 3808 ls
+ 3809 clear
+ 3810 get_icon_names
+ 3811 ls
+ 3812 cd Desktop/Work/art_fair
+ 3813 ls
+ 3814 clear
+ 3815 ls
+ 3816 cd Desktop/Work/art_fair
+ 3817 ls
+ 3818 open ~/.zshrc
+ 3819 ls
+ 3820 cd Desktop/Work
+ 3821 cd art_fair
+ 3822 cd Desktop/Work/art_fair
+ 3823 cd server
+ 3824 ls
+ 3825 cd Desktop/Work
+ 3826 cd art_fair
+ 3827 cd Desktop/Work/art_fair
+ 3828 le
+ 3829 clear
+ 3830 ls
+ 3831 cd ser
+ 3832 cd server
+ 3833 ls
+ 3834 cd ser
+ 3835 vim server.js
+ 3836 ls
+ 3837 le
+ 3838 clear
+ 3839 ls
+ 3840 open ~/.zshr
+ 3841 open ~/.zshrc
+ 3842 cd Desktop/Work
+ 3843 cd art_fair
+ 3844 open ~/.zshrc
+ 3845 cd Desktop/Genus
+ 3846 ls
+ 3847 cd mity_gpp
+ 3848 git branch -v -a
+ 3849 clear
+ 3850 git log
+ 3851 git diff
+ 3852 git branch
+ 3853 ga
+ 3854 gc "removed queueing from command socket send, and the main loop"
+ 3855 git log
+ 3856 git status
+ 3857 clear
+ 3858 git diff
+ 3859 ga
+ 3860 gc "Added process message switch for UI socket testing buttons"
+ 3861 ls
+ 3862 clear
+ 3863 ls
+ 3864 ls sd
+ 3865 ls
+ 3866 clear
+ 3867 ls
+ 3868 cd Desktop/Work/art_fair
+ 3869 ls
+ 3870 clear
+ 3871 cd
+ 3872 clear
+ 3873 ls
+ 3874 ls -a
+ 3875 git clone https://github.com/powerline/fonts.git
+ 3876 clear
+ 3877 cd Desktop/Work/art_fair
+ 3878 open ~/.zshrc
+ 3879 ls
+ 3880 clear
+ 3881 ls
+ 3882 cd Desktop/Genus/mity_gpp
+ 3883 clear
+ 3884 cd
+ 3885 ls
+ 3886 ls -a
+ 3887 ./fonts/install.sh
+ 3888 clear
+ 3889 ls
+ 3890 open ~/.zshrc
+ 3891 ls
+ 3892 clear
+ 3893 ls
+ 3894 cd Desktop/Work/art_fair
+ 3895 cd
+ 3896 clear
+ 3897 ls
+ 3898 open ~/.zshrc
+ 3899 ls
+ 3900 get_icon_names
+ 3901 clear
+ 3902 vim ~/.zshrc
+ 3903 echo \uf2b6
+ 3904 get_icon_names
+ 3905 clear
+ 3906 ls
+ 3907 cd Desktop/Work/art_fair
+ 3908 clear
+ 3909 ls
+ 3910 open ~/.zshrc
+ 3911 echo F016
+ 3912 echo /F016
+ 3913 clear
+ 3914 echo \F016
+ 3915 clear
+ 3916 echo $'\uE0B4'
+ 3917 echo $'\uF01A'
+ 3918 ls
+ 3919 clear
+ 3920 get_icon_names
+ 3921 cd
+ 3922 clear
+ 3923 vim ~/.get_icon_names
+ 3924 clear
+ 3925 cd .oh-my-zsh
+ 3926 ls
+ 3927 cd cusst
+ 3928 cd custom
+ 3929 cd .oh-my-zsh
+ 3930 cd custom/themes
+ 3931 ls
+ 3932 cd powerlevel9k
+ 3933 ls
+ 3934 ls -a
+ 3935 cd functions
+ 3936 ls
+ 3937 vim icons.zsh
+ 3938 ls
+ 3939 vim icons.zsh
+ 3940 ls
+ 3941 clear
+ 3942 ls
+ 3943 ls -a
+ 3944 clear
+ 3945 cd
+ 3946 cd .oh-my-zsh/custom/themes/powerlevel9k/functions
+ 3947 ls
+ 3948 vim icons.zsh
+ 3949 cd Desktop/Work
+ 3950 ls
+ 3951 cd Desktop/Work/art_fair
+ 3952 clear
+ 3953 ls
+ 3954 c
+ 3955 cd
+ 3956 clear
+ 3957 cd .oh-my-zsh/custom/themes/powerlevel9k/functions
+ 3958 vim icons.zsh
+ 3959 clear
+ 3960 ls
+ 3961 clear
+ 3962 cd Desktop/Work/art_fair
+ 3963 clear
+ 3964 ls
+ 3965 clear
+ 3966 open ~/.oh-my-zsh/custom/themes/powerlevel9k/functions/icons.zsh
+ 3967 /Users/jonahpelfrey/.oh-my-zsh/custom/themes/powerlevel9k/functions/icons.zsh; exit
+ 3968 ls
+ 3969 cd .oh-my-zsh/custom/themes/powerlevel9k/functions
+ 3970 ls
+ 3971 open icons.zsh
+ 3972 /Users/jonahpelfrey/.oh-my-zsh/custom/themes/powerlevel9k/functions/icons.zsh; exit
+ 3973 vim icons.zsh
+ 3974 clear
+ 3975 ls
+ 3976 cd Desktop/Work/art_fair
+ 3977 ls
+ 3978 cd server
+ 3979 clear
+ 3980 ls
+ 3981 mongod
+ 3982 clear
+ 3983 open ~/.zshrc
+ 3984 cd Desktop/Work/art_fair
+ 3985 clear
+ 3986 cd Desktop/Work/art_fair
+ 3987 ls
+ 3988 cd Desktop/Work/art_fair
+ 3989 git status
+ 3990 cd Desktop/Work/art_fair
+ 3991 clear
+ 3992 ls
+ 3993 top
+ 3994 clear
+ 3995 cd Desktop/Work/art_fair
+ 3996 clear
+ 3997 ls
+ 3998 cd server
+ 3999 ls
+ 4000 clear
+ 4001 ls
+ 4002 open ~/.zshrc
+ 4003 cd Desktop/Work/art_fair
+ 4004 ls
+ 4005 cd Desktop/Work/art_fair
+ 4006 clear
+ 4007 ls
+ 4008 clear
+ 4009 ls
+ 4010 clear
+ 4011 cd Desktop/Work/Ge
+ 4012 cd Desktop/Genus
+ 4013 clear
+ 4014 ls
+ 4015 cd mity_gpp
+ 4016 clear
+ 4017 ls
+ 4018 git status
+ 4019 cd Desktop
+ 4020 cd Work/art_fair
+ 4021 open ~/.zshrc
+ 4022* clear
+ 4023* cd Desktop/Genus/mity_gpp
+ 4024* clear
+ 4025* ls
+ 4026 cd Desktop/Work/art_fair
+ 4027 clear
+ 4028 ls
+ 4029* clear
+ 4030* ls
+ 4031* who
+ 4032* ssh deenatenzer@2602:304:cffc:d980:e89f:76e1:a335:587a
+ 4033* ls
+ 4034* cd Desktop/Work/art_fair/public
+ 4035* clear
+ 4036* ls
+ 4037* ng serve
+ 4038* clear
+ 4039* ls
+ 4040* cd src
+ 4041* ls
+ 4042* cd app
+ 4043* ls
+ 4044* rm -rf artist-table
+ 4045* clear
+ 4046* cd ../..
+ 4047* ng serve
+ 4048* clear
+ 4049* ng serve
+ 4050 cleawr
+ 4051 ls
+ 4052 clear
+ 4053 cd public
+ 4054 ls
+ 4055 clear
+ 4056 ls
+ 4057 cd src
+ 4058 ls
+ 4059 cd app
+ 4060 clear
+ 4061 ls
+ 4062 clear
+ 4063* cd Desktop/Work/art_fair
+ 4064* clear
+ 4065* ls
+ 4066* clear
+ 4067* open .
+ 4068* ls
+ 4069* clear
+ 4070* ls
+ 4071* cd cmatrix-1.2a
+ 4072* ls
+ 4073* make
+ 4074* ./configure
+ 4075* clear
+ 4076* make
+ 4077* make install
+ 4078* ./make install
+ 4079* clear
+ 4080* ls
+ 4081* ./install-sh
+ 4082* ./cmatrix
+ 4083* ./cmatrix -a
+ 4084* clear
+ 4085* cd
+ 4086* cd cmatrix-1.2a
+ 4087* ls
+ 4088* clear
+ 4089* ./cmatrix -a
+ 4090 ls
+ 4091* cd
+ 4092* clear
+ 4093* ./mongod
+ 4094* cd
+ 4095* clear
+ 4096* mongod
+ 4097* clear
+ 4098* ls
+ 4099* ./cmatrix
+ 4100* clear
+ 4101* ls
+ 4102 clear
+ 4103* ./cmatrix
+ 4104* clear
+ 4105* ./cmatrix
+ 4106 cal
+ 4107 cd
+ 4108 clear
+ 4109 ls
+ 4110 wget https://github.com/nicolargo/glances/archive/vX.Y.tar.gz -O - | tar xz
+ 4111 ls
+ 4112 ls -a
+ 4113 cd /usr/local
+ 4114 ls
+ 4115 curl -L https://bit.ly/glances | /usr/local/bin/
+ 4116 ls
+ 4117 curl -L https://bit.ly/glances | /bin/bash
+ 4118 python
+ 4119 clear
+ 4120 ls
+ 4121 pip
+ 4122 cd
+ 4123 clear
+ 4124 ls
+ 4125 curl https://github.com/nicolargo/glances/archive/vX.Y.tar.gz
+ 4126 ls
+ 4127 ls -a
+ 4128 clear
+ 4129 system_profiler | grep Processor
+ 4130 htop
+ 4131 clear
+ 4132 ls
+ 4133 ls -a
+ 4134 mkdir bin
+ 4135 open .
+ 4136* cmatrix
+ 4137 clear
+ 4138 cd bin
+ 4139 ls
+ 4140 git clone git@github.com:hishamhm/htop.git\n
+ 4141 git clone https://github.com/hishamhm/htop.git
+ 4142 cd htop
+ 4143 ./autogen.sh && ./configure.ac && make
+ 4144 ./autogen.sh
+ 4145 ls
+ 4146 ./autogen.sh
+ 4147 clear
+ 4148 ls
+ 4149 autogen.sh
+ 4150 ./autogen.sh
+ 4151 clear
+ 4152 ls
+ 4153 ./configure
+ 4154 cd ..
+ 4155 ls
+ 4156 cd htop
+ 4157 ls
+ 4158 macports
+ 4159 MacPorts
+ 4160 cd ..
+ 4161 ls
+ 4162 rm -rf htop
+ 4163 cd
+ 4164 clear
+ 4165 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+ 4166 cd
+ 4167 clear
+ 4168 brew help
+ 4169 ls
+ 4170 ls -a
+ 4171 clear
+ 4172 brew install htop
+ 4173 sudo htop
+ 4174 ls
+ 4175 python get-pip.py
+ 4176 sudo python get-pip.py
+ 4177 pip
+ 4178 rm -rf get-pip.py
+ 4179 clear
+ 4180 ls
+ 4181 pip
+ 4182 sudo easy_install pip
+ 4183 clear
+ 4184 pip
+ 4185 clear
+ 4186 pip install glances
+ 4187 clear
+ 4188 pip install psutil
+ 4189 sudo pip install psutil
+ 4190 sudo pip install glances
+ 4191 cd /System/Library/Frameworks
+ 4192 ls
+ 4193 cd Python.framework
+ 4194 ls
+ 4195 cd
+ 4196 clear
+ 4197 brew list
+ 4198 brew install tree
+ 4199 clear
+ 4200 ls
+ 4201 cd Desktop/Work/art_fair
+ 4202 tree
+ 4203 clear
+ 4204 cd server
+ 4205 tree > logfile.txt
+ 4206 ls
+ 4207 vim logfile.txt
+ 4208 rm logfile.txt
+ 4209 clear
+ 4210 brew install peco
+ 4211 clear
