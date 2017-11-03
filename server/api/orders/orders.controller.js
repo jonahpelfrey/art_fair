@@ -77,9 +77,24 @@ function addOrderToBuyer(buyerId, orderId) {
 	return p.promise;
 }
 
-function removeOrderFromBuyer(id) {
+function removeOrderFromBuyer(buyerId, orderId) {
 
-	//TODO
+	var p = Q.defer();
+
+	Buyer.findOne({_id: buyerId})
+		.then(function(buyer){
+
+			buyer.orders.remove(orderId);
+			buyer.save(function(err, result){
+				if(err) p.reject(err);
+				else { p.resolve(result); }
+			});
+			
+		}, function(err){
+			p.reject(err);
+		});
+
+	return p.promise;
 }
 
 function generateRefKey() {
